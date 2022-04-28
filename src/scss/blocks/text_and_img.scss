@@ -1,0 +1,48 @@
+.text_and_img {
+  display: flex;
+  margin-top: 20px;
+  &.this--reverse {
+    flex-direction: row-reverse;
+  }
+}
+.text_and_img__text {
+  margin-top: 30px;
+  width: calc(50% - 50px);
+  margin-right: 50px;
+  font-size: 1.8rem;
+  line-height: 1.56;
+  p {
+    margin-bottom: 20px;
+  }
+  ul {
+    margin-bottom: 20px;
+    padding-left: 25px;
+  }
+  .text_and_img.this--reverse & {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+.text_and_img__img_wr {
+  width: 50%;
+  flex: 0 0 auto;
+  .text_and_img.this--reverse & {
+    width: calc(50% - 50px);
+    margin-right: 50px;
+  }
+}
+.text_and_img__img {
+  position: relative;
+  padding-top: 68%;
+  overflow: hidden;
+  border-radius: 15px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+  }
+}

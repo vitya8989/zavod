@@ -1,0 +1,22 @@
+.main_counts {
+  background: #272E3E;
+}
+.main_counts__items {
+  display: flex;
+  margin-left: -40px;
+}
+.main_counts__item {
+  margin-left: 40px;
+  width: calc(25% - 40px);
+}
+.main_counts__label {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  color: #F9F9FB;
+}
+.main_counts__value {
+  font-weight: 500;
+  font-size: 6rem;
+  line-height: 1.2;
+  color: #F9F9FB;
+}

@@ -1,0 +1,73 @@
+@import "null";
+@import "variables";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "fonts";
+
+html {
+	font-size: 10px;
+}
+body {
+	font-size: 1.4rem;
+	line-height: 1.5;
+	font-family: Rubik, sans-serif;
+	font-weight: 400;
+	color: #272E3E;
+
+	&.this--overflow {
+		overflow: hidden;
+	}
+}
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+main {
+	flex: 1 0 auto;
+	padding-top: 147px;
+	background: #F2F4FF;
+	@media ($tablet2) {
+		padding-top: 97px;
+	}
+}
+
+.section {
+	padding: 60px 0;
+	@media ($tablet2) {
+		padding: 40px 0;
+	}
+	&.this--top {
+		padding-bottom: 0;
+	}
+	&.this--bottom {
+		padding-top: 0;
+	}
+}
+
+@import "./blocks/btn";
+@import "./blocks/title";
+@import "./blocks/text_and_img";
+
+@import "../components/header/header";
+
+@import "../components/main/main_slider/main_slider";
+@import "../components/main/main_catalog/main_catalog";
+@import "../components/main/main_benefits/main_benefits";
+@import "../components/main/main_counts/main_counts";
+@import "../components/main/main_about/main_about";

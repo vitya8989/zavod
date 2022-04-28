@@ -1,0 +1,154 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.header__top {
+  background: #272E3E;
+  @media($tablet2) {
+    display: none;
+  }
+}
+.header__top_row {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__address {
+  color: #F9F9FB;
+  margin-right: 15px;
+}
+.header__time {
+  color: #F9F9FB;
+  margin-right: 15px;
+  flex: 0 0 auto;
+}
+.header__search_form {
+  flex: 0 1 300px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 15px;
+}
+.header__search {
+  background: #FFFFFF;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  padding: 0 40px 0 15px;
+  color: #585858;
+}
+.header__search_form_btn {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: calc(50% - 7px);
+  right: 15px;
+  cursor: pointer;
+}
+.header__tel {
+  color: #F9F9FB;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.17;
+  flex: 0 0 auto;
+}
+.header__bottom {
+  background: #F2F4FF;
+  @media($tablet2) {
+    background: #272E3E;
+  }
+}
+.header__bottom_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 97px;
+}
+.header__logo_text {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  width: 65px;
+  height: 65px;
+  margin-right: 15px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.header__text {
+  font-weight: 600;
+  line-height: 1.43;
+  text-transform: uppercase;
+  color: #272E3E;
+  @media($tablet2) {
+    color: #F2F4FF;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+.header__nav {
+  display: flex;
+  list-style-type: none;
+  max-width: 545px;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+.header__nav_link {
+  font-size: 1.6rem;
+  line-height: 1.31;
+  color: #272E3E;
+  padding: 30px 0;
+  transition: 0.2s;
+
+  &:hover {
+    @media($tablet2Max) {
+      color: #FF4901;
+    }
+  }
+}
+.header__icon_links {
+  display: flex;
+}
+.header__basket {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  @media (max-width: 1250px) {
+    margin-right: 25px;
+  }
+}
+.header__basket_img,
+.header__personal_img{
+  margin-right: 10px;
+  width: 21px;
+  height: 21px;
+  @media (max-width: 1250px) {
+    margin-right: 0;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.header__basket_text,
+.header__personal_text {
+  font-size: 1.6rem;
+  line-height: 1.31;
+  color: #272E3E;
+  @media (max-width: 1250px) {
+    display: none;
+  }
+}
+.header__personal {
+  display: flex;
+  align-items: center;
+}
