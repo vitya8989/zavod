@@ -45,6 +45,9 @@ main {
 	@media ($tablet2) {
 		padding-top: 97px;
 	}
+	@media ($mobile) {
+		padding-top: 139px;
+	}
 }
 
 .section {
@@ -65,6 +68,7 @@ main {
 @import "./blocks/text_and_img";
 
 @import "../components/header/header";
+@import "../components/footer/footer";
 
 @import "../components/main/main_slider/main_slider";
 @import "../components/main/main_catalog/main_catalog";

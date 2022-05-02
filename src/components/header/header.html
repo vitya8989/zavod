@@ -15,21 +15,55 @@
     <div class="header__bottom">
         <div class="container">
             <div class="header__bottom_row">
-                <a href="/" class="header__logo_text">
-                    <div class="header__logo">
-                        <img src="/img/header/logo.png" alt="">
-                    </div>
-                    <div class="header__text">
-                        завод по производству<br> запасных частей<br>для электрических машин
-                    </div>
-                </a>
-                <ul class="header__nav">
-                    <li class="header__nav_item"><a href="" class="header__nav_link">Главная</a></li>
-                    <li class="header__nav_item"><a href="" class="header__nav_link">Каталог</a></li>
-                    <li class="header__nav_item"><a href="" class="header__nav_link">О компании</a></li>
-                    <li class="header__nav_item"><a href="" class="header__nav_link">Новости</a></li>
-                    <li class="header__nav_item"><a href="" class="header__nav_link">Контакты</a></li>
-                </ul>
+                <div class="header__logo_text_wr">
+                    <a href="/" class="header__logo_text">
+                        <div class="header__logo">
+                            <img src="/img/header/logo.png" alt="">
+                        </div>
+                        <div class="header__text">
+                            завод по производству<br> запасных частей<br>для электрических машин
+                        </div>
+                    </a>
+                </div>
+                <div class="header__nav_wr">
+                    <ul class="header__nav">
+                        <li class="header__nav_item"><a href="/" class="header__nav_link">Главная</a></li>
+                        <li class="header__nav_mob_line"></li>
+                        <li class="header__nav_item">
+                            <a href="/catalog.html" class="header__nav_link header__nav_link_hover">Каталог <span class="header__nav_link_arrow"></span></a>
+                            <ul class="header__hide_menu">
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Запчасти для электродвигателей</a>
+                                </li>
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Запчасти для гидрогенераторов</a>
+                                </li>
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Запчасти для турбогенераторов</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__nav_mob_line"></li>
+                        <li class="header__nav_item">
+                            <a href="#" class="header__nav_link header__nav_link_hover">О компании <span class="header__nav_link_arrow"></span></a>
+                            <ul class="header__hide_menu">
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Документы</a>
+                                </li>
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Реквизиты</a>
+                                </li>
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Партнеры</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__nav_mob_line"></li>
+                        <li class="header__nav_item"><a href="#" class="header__nav_link">Новости</a></li>
+                        <li class="header__nav_mob_line"></li>
+                        <li class="header__nav_item"><a href="#" class="header__nav_link">Контакты</a></li>
+                    </ul>
+                </div>
                 <div class="header__icon_links">
                     <a href="#" class="header__basket">
                         <div class="header__basket_img">
@@ -38,6 +72,7 @@
                                 <path d="M6.55784 20.9883C6.125 20.9883 5.70191 20.8606 5.34219 20.6215C4.98246 20.3823 4.7023 20.0425 4.5372 19.645C4.37211 19.2475 4.32952 18.8103 4.41482 18.3888C4.50013 17.9672 4.7095 17.5803 5.01638 17.2771C5.32327 16.9739 5.71387 16.768 6.13867 16.6855C6.56348 16.6031 7.00336 16.6478 7.40257 16.8139C7.80179 16.9801 8.14236 17.2602 8.38112 17.6189C8.61989 17.9775 8.7461 18.3985 8.74376 18.8285C8.74064 19.4024 8.50896 19.9517 8.09935 20.3564C7.68975 20.7611 7.13554 20.9883 6.55784 20.9883ZM7.2786 18.8167C7.2755 18.6289 7.1982 18.4498 7.06336 18.318C6.92853 18.1863 6.74697 18.1124 6.55784 18.1125C6.41197 18.1101 6.26872 18.1511 6.14646 18.2302C6.02419 18.3093 5.92847 18.4228 5.87157 18.5563C5.81466 18.6897 5.79916 18.837 5.82705 18.9792C5.85494 19.1215 5.92495 19.2522 6.0281 19.3547C6.13126 19.4572 6.26287 19.5268 6.40607 19.5545C6.54927 19.5822 6.69753 19.5668 6.83187 19.5102C6.9662 19.4537 7.08048 19.3586 7.16007 19.2372C7.23966 19.1157 7.28094 18.9734 7.2786 18.8285V18.8167Z" fill="#272E3E"/>
                                 <path d="M13.1156 18.8285C13.1156 18.5433 13.1721 18.2609 13.282 17.9975C13.3918 17.734 13.5529 17.4946 13.7558 17.293C13.9588 17.0913 14.1998 16.9314 14.465 16.8223C14.7302 16.7131 15.0145 16.657 15.3015 16.657C15.5886 16.657 15.8728 16.7131 16.138 16.8223C16.4032 16.9314 16.6442 17.0913 16.8472 17.293C17.0502 17.4946 17.2112 17.734 17.3211 17.9975C17.4309 18.2609 17.4874 18.5433 17.4874 18.8285C17.4874 19.4044 17.2571 19.9567 16.8472 20.364C16.4373 20.7712 15.8813 21 15.3015 21C14.7218 21 14.1658 20.7712 13.7558 20.364C13.3459 19.9567 13.1156 19.4044 13.1156 18.8285ZM16.0341 18.8285C16.0341 18.6841 15.9908 18.5429 15.9098 18.423C15.8287 18.3031 15.7136 18.2098 15.5791 18.1551C15.4445 18.1004 15.2966 18.0866 15.1542 18.1157C15.0118 18.1447 14.8813 18.2152 14.7793 18.3182C14.6773 18.4211 14.6085 18.5519 14.5816 18.6938C14.5547 18.8358 14.5709 18.9825 14.6282 19.1152C14.6854 19.248 14.7812 19.3608 14.9032 19.4393C15.0252 19.5179 15.168 19.5586 15.3133 19.5562C15.5066 19.5501 15.69 19.4695 15.8245 19.3315C15.959 19.1935 16.0342 19.0089 16.0341 18.8167V18.8285Z" fill="#272E3E"/>
                             </svg>
+                            <span class="header__basket_count">5</span>
                         </div>
                         <div class="header__basket_text">Корзина</div>
                     </a>
@@ -49,6 +84,9 @@
                         </div>
                         <div class="header__personal_text">Личный кабинет</div>
                     </a>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>

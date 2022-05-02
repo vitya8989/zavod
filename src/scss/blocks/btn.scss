@@ -20,23 +20,25 @@
     line-height: 1.62;
   }
   &:hover {
-    border: 2px solid #FF4901;
-    background: #FF4901;
-    color: #ffffff;
+    @media ($tablet2Max) {
+      border: 2px solid #FF4901;
+      background: #FF4901;
+      color: #ffffff;
+    }
   }
 
   &.this--wh {
-    background: #ffffff;
-
+    background: transparent;
+    border: 2px solid #272E3E;
     &:hover {
       @media ($tablet2Max) {
-        background: #D59A14;
-        color: #ffffff;
+        background: #FF4901;
+        border: 2px solid #FF4901;
+        color: #F9F9FB;
         .prev_btn_arrow {
-          background: #ffffff;
           &::before,
           &::after {
-            background: #ffffff;
+            background: #F9F9FB;
           }
         }
       }
@@ -75,16 +77,14 @@
 }
 
 .prev_btn_arrow {
-  width: 22px;
-  height: 2px;
+  width: 5px;
+  height: 10px;
   position: relative;
-  transition: 0.3s;
-  background: #000000;
-  margin-right: 17px;
+  margin-right: 15px;
 
   &::before,
   &::after {
-    width: 10px;
+    width: 7px;
     height: 2px;
     position: absolute;
     content: '';
@@ -93,11 +93,11 @@
     background: #000000;
   }
   &::before {
-    top: -3px;
+    top: 1px;
     transform: rotate(-45deg);
   }
   &::after {
-    top: 3px;
+    bottom: 3px;
     transform: rotate(45deg);
   }
 }

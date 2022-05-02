@@ -1,13 +1,29 @@
 .main_counts {
-  background: #272E3E;
+
 }
 .main_counts__items {
   display: flex;
   margin-left: -40px;
+  @media ($desktop) {
+    flex-wrap: wrap;
+    margin-bottom: -30px;
+  }
+  @media ($mobile) {
+    margin-left: 0;
+  }
 }
 .main_counts__item {
   margin-left: 40px;
   width: calc(25% - 40px);
+  @media ($desktop) {
+    width: calc(50% - 40px);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  @media ($mobile) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .main_counts__label {
   font-size: 1.8rem;
@@ -19,4 +35,9 @@
   font-size: 6rem;
   line-height: 1.2;
   color: #F9F9FB;
+
+  @media ($tablet3) {
+    font-size: 4rem;
+    margin-top: 5px;
+  }
 }

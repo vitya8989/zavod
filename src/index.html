@@ -15,11 +15,20 @@
     @@include('components/header/header.html')
     <main class="main">
         @@include('components/main/main_slider/main_slider.html')
-        @@include('components/main/main_catalog/main_catalog.html')
+        <div class="main_catalog section">
+            <div class="container">
+                <div class="main_catalog__content">
+                    <h2 class="main_catalog__title">Каталог</h2>
+                    @@include('components/main/main_catalog/main_catalog.html')
+                    <a href="/catalog.html" class="main_catalog__link btn">Перейти в каталог</a>
+                </div>
+            </div>
+        </div>
         @@include('components/main/main_benefits/main_benefits.html')
         @@include('components/main/main_counts/main_counts.html')
         @@include('components/main/main_about/main_about.html')
     </main>
+    @@include('components/footer/footer.html')
 </div>
 
 <script src="js/swiper-bundle.min.js"></script>
