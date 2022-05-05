@@ -5,25 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Страница не найдена</title>
+    <title>Раздел каталога</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 <div class="wrapper">
     @@include('components/header/header.html')
-    <main class="page_404">
+    <main class="catalog_part">
         <div class="container">
-            <div class="page_404__content section">
-                @@include('components/page_404/page_404_top/page_404_top.html')
-                @@include('components/main/main_catalog/main_catalog.html')
-            </div>
+            @@include('components/catalog_part/catalog_part_content/catalog_part_content.html')
         </div>
     </main>
     @@include('components/footer/footer.html')
 </div>
 
-<script src="js/page_404.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/catalog_part.js"></script>
 </body>
 
 </html>

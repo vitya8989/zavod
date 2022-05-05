@@ -1,0 +1,414 @@
+.catalog_part__filter {
+  margin-right: 40px;
+
+  @media ($tablet2) {
+    margin-right: 0;
+  }
+}
+.filter {
+  width: 310px;
+  flex: 0 0 auto;
+
+  @media ($tablet2) {
+    position: fixed;
+    top: 112px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 112px);
+    max-height: calc(100vh - 112px);
+    background: #ffffff;
+    z-index: 40;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(200%);
+    transition: 0.3s;
+    &.filter_open {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  input[type="checkbox"] {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+}
+
+.filter__mobile_title {
+  display: none;
+  @media ($tablet2) {
+    display: block;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.42;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+  }
+}
+.filter__close_btn {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 21px;
+    height: 2px;
+    top: calc(50% - 1px);
+    left: calc(50% - 10.5px);
+    background: #000000;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.filter__body {
+  position: relative;
+  padding: 30px 25px 40px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  @media ($tablet2) {
+    &.this--big_pb {
+      padding-bottom: 160px;
+    }
+  }
+}
+
+.filter__float_button{
+  position: absolute;
+  left: 255px;
+  top: 0;
+  z-index: 30;
+  overflow: visible;
+  cursor: pointer;
+  @media ($tablet2) {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 14px 7px 0;
+    border-color: transparent #F9C859 transparent transparent;
+    z-index: 30;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    &::before {
+      border-color: transparent #D59A14 transparent transparent;
+    }
+  }
+  &.this--hidden {
+    display: none;
+  }
+}
+
+.filter__item {
+  margin-bottom: 20px;
+  @media ($tablet2) {
+    margin-bottom: 0;
+    border-top: 1px solid #D1D1D1;
+  }
+}
+.filter__item_title_wr {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 10px;
+  @media ($tablet2) {
+    margin-bottom: 0;
+    padding: 15px 10px 15px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &:hover {
+    @media ($tablet2Max) {
+      .filter__item_title {
+        color: #A27207;
+      }
+      .filter__item_arrow {
+        svg {
+          path {
+            fill: #A27207;
+          }
+        }
+      }
+    }
+  }
+}
+.filter__item_arrow {
+  margin-bottom: 5px;
+  transition: 0.3s;
+  svg {
+    path {
+      transition: 0.3s;
+    }
+  }
+
+  &.rotate {
+    transform: rotate(180deg);
+  }
+}
+.filter__item_title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  transition: 0.3s;
+}
+.filter__item_body {
+  @media ($tablet2) {
+    padding: 0 20px;
+  }
+}
+
+.filter__checkbox_label  {
+  display: block;
+  font-weight: 400;
+  line-height: 1.31;
+  padding: 8px 0 6px 35px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 5px;
+  @media ($tablet2) {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    border: 1px solid #4A4A4A;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    br {
+      display: none;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 17px;
+    background: #FFFFFF;
+    border: 1px solid #F9C859;
+    transition: 0.3s;
+    transform: translateY(-50%);
+
+    @media ($tablet2) {
+      display: none;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    width: 9px;
+    height: 9px;
+    left: 8px;
+    top: 17px;
+    transform: translateY(-50%);
+    background: #FFFBF2;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    @media ($tablet2) {
+      display: none;
+    }
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      color: #A27207;
+      &::before {
+        background: #FFFBF2;
+      }
+    }
+  }
+}
+
+input[type="checkbox"]:checked + .filter__checkbox_label  {
+  &::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  &::before {
+    background: #F9C859;
+  }
+  @media ($tablet2) {
+    background: #F9C859;
+    border: 1px solid #F9C859;
+    .filter__label_count {
+      color: #4A4A4A;
+    }
+  }
+}
+
+.filter__label_count {
+ margin-left: 10px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #B8B8B8;
+  transition: 0.3s;
+}
+
+.filter__price_inputs_wr {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.15;
+}
+
+.filter__price_input {
+  width: 90px;
+  margin: 0 7px;
+  background: #FFFFFF;
+  border: 1px solid #D2D5E4;
+  border-radius: 5px;
+  padding: 11px 7px 10px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  transition: 0.3s;
+
+  &:hover {
+    @media ($tablet2Max) {
+      border: 1px solid #F9C859;
+    }
+  }
+  &:focus {
+    border: 1px solid #F9C859;
+  }
+}
+
+.filter__price_rubl {
+  font-weight: 400;
+  line-height: 1.75;
+  text-transform: uppercase;
+}
+
+.filter__price_slider_wr {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+  .filter__price_slider.ui-slider {
+    position: relative;
+    width: 242px;
+
+    @media($mobileMiddle) {
+      width: calc(100% - 25px);
+    }
+  }
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 5;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 4px solid #000000;
+    cursor: pointer;
+
+    &:hover {
+      @media ($tablet2Max) {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    height: 3px;
+    overflow: hidden;
+  }
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  .ui-slider-horizontal {
+    height: 3px; /* задаем высоту согласно дизайна */
+    background: #FF4901;
+    border-radius: 3px;
+  }
+  /* позиционируем ползунки */
+  .ui-slider-horizontal .ui-slider-handle {
+    top: -6px;
+    margin-left: -4px;
+    background: #FF4901;
+    width: 15px;
+    height: 15px;
+    border: none;
+  }
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+  }
+  .ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+  }
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+  }
+  /* оформление полосы по которой ходит ползунок */
+  .ui-widget-content {
+    background: #D2D5E4;
+    border-radius: 3px;
+  }
+  /* оформление активного участка (между двумя ползунками) */
+  .ui-widget-header {
+    height: 3px;
+    background: #FF4901;
+  }
+  /* скругление для полосы слайдера */
+  .ui-corner-all {
+  }
+
+
+
+
+.filter__btns_wr {
+  margin-bottom: -10px;
+  @media ($tablet2) {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.filter__btn {
+  margin-bottom: 10px;
+  @media ($tablet2) {
+    width: 335px;
+  }
+}

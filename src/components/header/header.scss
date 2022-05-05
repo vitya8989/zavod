@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 100;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
 }
 .header__top {
   background: #272E3E;
@@ -166,6 +167,7 @@
   display: flex;
   list-style-type: none;
   justify-content: space-between;
+  flex-wrap: wrap;
   @media ($tablet2) {
     display: block;
     margin-top: 25px;

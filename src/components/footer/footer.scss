@@ -53,9 +53,12 @@
   display: flex;
   list-style-type: none;
   justify-content: space-between;
+  flex-wrap: wrap;
   @media ($tablet2) {
-    display: block;
     margin: 20px 0 -20px 0;
+  }
+  @media ($mobile) {
+    display: block;
   }
 }
 .footer__menu_item {

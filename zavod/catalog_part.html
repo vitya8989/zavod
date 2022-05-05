@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Раздел каталога</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top_row">
+                <div class="header__address">г. Санкт-Петербург, ул. Стахановцев, д. 14, корп. 1 литер А, пом. 6-Н офис 2А</div>
+                <div class="header__time">ПН–ПТ 10:00 – 18:00</div>
+                <form action="" name="search" class="header__search_form">
+                    <input type="text" class="header__search" placeholder="Поиск">
+                    <input type="submit" class="header__search_form_btn" value="" style="background: url('/img/header/lupe.png') 0 0/ 100% 100% no-repeat">
+                </form>
+                <a href="tel:+78124265225" class="header__tel">+7 (812) 426-52-25</a>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="container">
+            <div class="header__bottom_row">
+                <div class="header__logo_text_wr">
+                    <a href="/" class="header__logo_text">
+                        <div class="header__logo">
+                            <img src="/img/header/logo.png" alt="">
+                        </div>
+                        <div class="header__text">
+                            завод по производству<br> запасных частей<br>для электрических машин
+                        </div>
+                    </a>
+                </div>
+                <div class="header__nav_wr">
+                    <ul class="header__nav">
+                        <li class="header__nav_item"><a href="/" class="header__nav_link">Главная</a></li>
+                        <li class="header__nav_mob_line"></li>
+                        <li class="header__nav_item">
+                            <a href="/catalog.html" class="header__nav_link header__nav_link_hover">Каталог <span class="header__nav_link_arrow"></span></a>
+                            <ul class="header__hide_menu">
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Запчасти для электродвигателей</a>
+                                </li>
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Запчасти для гидрогенераторов</a>
+                                </li>
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Запчасти для турбогенераторов</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__nav_mob_line"></li>
+                        <li class="header__nav_item">
+                            <a href="#" class="header__nav_link header__nav_link_hover">О компании <span class="header__nav_link_arrow"></span></a>
+                            <ul class="header__hide_menu">
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Документы</a>
+                                </li>
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Реквизиты</a>
+                                </li>
+                                <li class="header__hide_menu_item">
+                                    <a href="#" class="header__hide_menu_link">Партнеры</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__nav_mob_line"></li>
+                        <li class="header__nav_item"><a href="#" class="header__nav_link">Новости</a></li>
+                        <li class="header__nav_mob_line"></li>
+                        <li class="header__nav_item"><a href="/contacts.html" class="header__nav_link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="header__icon_links">
+                    <a href="#" class="header__basket">
+                        <div class="header__basket_img">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.95839 3.61613H19.4843C19.8367 3.5909 20.1859 3.69726 20.4634 3.91437C20.741 4.13149 20.927 4.44372 20.9849 4.78992C21.0191 5.08905 20.995 5.39191 20.914 5.682C20.3705 8.27217 19.8152 10.8623 19.248 13.4525C19.1501 13.9557 18.8753 14.4078 18.4727 14.7282C18.0701 15.0486 17.5659 15.2164 17.0503 15.2015H5.73075C5.16585 15.2177 4.61677 15.0148 4.1999 14.6357C3.78303 14.2567 3.53112 13.7312 3.49757 13.1708C3.28489 11.0815 3.04857 9.00384 2.83589 6.91448L2.26873 1.56199C2.27186 1.52684 2.27186 1.49149 2.26873 1.45635H0.732677C0.636033 1.45793 0.540055 1.44019 0.450452 1.40418C0.36085 1.36817 0.279454 1.31463 0.211107 1.24673C0.142759 1.17883 0.0888576 1.09797 0.0526077 1.00896C0.0163579 0.919948 -0.00149927 0.824602 9.84865e-05 0.728595C8.58418e-05 0.632029 0.0194189 0.536427 0.0569711 0.447358C0.0945233 0.358289 0.149544 0.277535 0.218826 0.209801C0.288109 0.142068 0.370268 0.0887091 0.460517 0.0528341C0.550766 0.0169591 0.6473 -0.000714742 0.744493 0.000842767H2.85952C2.95923 -0.00389017 3.05888 0.0113477 3.15254 0.0456499C3.2462 0.0799521 3.33196 0.132618 3.40472 0.200514C3.47747 0.26841 3.53574 0.35015 3.57605 0.440871C3.61636 0.531591 3.63789 0.62944 3.63936 0.728595L3.92294 3.38137C3.93476 3.44006 3.94657 3.51048 3.95839 3.61613ZM4.12381 5.07163C4.20652 5.74069 4.27741 6.39802 4.33649 7.05534L4.97454 13.0417C4.97731 13.1415 5.00072 13.2397 5.04332 13.3301C5.08592 13.4205 5.14679 13.5013 5.22216 13.5673C5.29752 13.6334 5.38576 13.6834 5.48139 13.7141C5.57702 13.7448 5.67799 13.7557 5.77802 13.746H16.9912C17.1838 13.7657 17.3765 13.7089 17.527 13.5879C17.6776 13.4669 17.7738 13.2916 17.7947 13.1004C18.1846 11.281 18.5863 9.44988 18.9762 7.6305C19.1535 6.78537 19.3425 5.94024 19.5316 5.07163H4.12381Z" fill="#272E3E"/>
+                                <path d="M6.55784 20.9883C6.125 20.9883 5.70191 20.8606 5.34219 20.6215C4.98246 20.3823 4.7023 20.0425 4.5372 19.645C4.37211 19.2475 4.32952 18.8103 4.41482 18.3888C4.50013 17.9672 4.7095 17.5803 5.01638 17.2771C5.32327 16.9739 5.71387 16.768 6.13867 16.6855C6.56348 16.6031 7.00336 16.6478 7.40257 16.8139C7.80179 16.9801 8.14236 17.2602 8.38112 17.6189C8.61989 17.9775 8.7461 18.3985 8.74376 18.8285C8.74064 19.4024 8.50896 19.9517 8.09935 20.3564C7.68975 20.7611 7.13554 20.9883 6.55784 20.9883ZM7.2786 18.8167C7.2755 18.6289 7.1982 18.4498 7.06336 18.318C6.92853 18.1863 6.74697 18.1124 6.55784 18.1125C6.41197 18.1101 6.26872 18.1511 6.14646 18.2302C6.02419 18.3093 5.92847 18.4228 5.87157 18.5563C5.81466 18.6897 5.79916 18.837 5.82705 18.9792C5.85494 19.1215 5.92495 19.2522 6.0281 19.3547C6.13126 19.4572 6.26287 19.5268 6.40607 19.5545C6.54927 19.5822 6.69753 19.5668 6.83187 19.5102C6.9662 19.4537 7.08048 19.3586 7.16007 19.2372C7.23966 19.1157 7.28094 18.9734 7.2786 18.8285V18.8167Z" fill="#272E3E"/>
+                                <path d="M13.1156 18.8285C13.1156 18.5433 13.1721 18.2609 13.282 17.9975C13.3918 17.734 13.5529 17.4946 13.7558 17.293C13.9588 17.0913 14.1998 16.9314 14.465 16.8223C14.7302 16.7131 15.0145 16.657 15.3015 16.657C15.5886 16.657 15.8728 16.7131 16.138 16.8223C16.4032 16.9314 16.6442 17.0913 16.8472 17.293C17.0502 17.4946 17.2112 17.734 17.3211 17.9975C17.4309 18.2609 17.4874 18.5433 17.4874 18.8285C17.4874 19.4044 17.2571 19.9567 16.8472 20.364C16.4373 20.7712 15.8813 21 15.3015 21C14.7218 21 14.1658 20.7712 13.7558 20.364C13.3459 19.9567 13.1156 19.4044 13.1156 18.8285ZM16.0341 18.8285C16.0341 18.6841 15.9908 18.5429 15.9098 18.423C15.8287 18.3031 15.7136 18.2098 15.5791 18.1551C15.4445 18.1004 15.2966 18.0866 15.1542 18.1157C15.0118 18.1447 14.8813 18.2152 14.7793 18.3182C14.6773 18.4211 14.6085 18.5519 14.5816 18.6938C14.5547 18.8358 14.5709 18.9825 14.6282 19.1152C14.6854 19.248 14.7812 19.3608 14.9032 19.4393C15.0252 19.5179 15.168 19.5586 15.3133 19.5562C15.5066 19.5501 15.69 19.4695 15.8245 19.3315C15.959 19.1935 16.0342 19.0089 16.0341 18.8167V18.8285Z" fill="#272E3E"/>
+                            </svg>
+                            <span class="header__basket_count">5</span>
+                        </div>
+                        <div class="header__basket_text">Корзина</div>
+                    </a>
+                    <a href="#" class="header__personal">
+                        <div class="header__personal_img">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10.4895C21 4.69875 16.296 0 10.5 0C4.704 0 0 4.69875 0 10.4895C0 13.6789 1.449 16.5532 3.717 18.4826C3.738 18.5036 3.759 18.5036 3.759 18.5246C3.948 18.6716 4.137 18.8186 4.347 18.9656C4.452 19.0286 4.536 19.1113 4.641 19.1953C6.37621 20.3718 8.42456 21.0005 10.521 21C12.6174 21.0005 14.6658 20.3718 16.401 19.1953C16.506 19.1323 16.59 19.0496 16.695 18.9853C16.884 18.8396 17.094 18.6926 17.283 18.5456C17.304 18.5246 17.325 18.5246 17.325 18.5036C19.551 16.5519 21 13.6789 21 10.4895ZM10.5 19.6783C8.526 19.6783 6.72 19.0483 5.229 17.9996C5.25 17.8316 5.292 17.6649 5.334 17.4969C5.45913 17.0416 5.64265 16.6044 5.88 16.1963C6.111 15.7972 6.384 15.4403 6.72 15.1252C7.035 14.8103 7.413 14.5176 7.791 14.2866C8.19 14.0556 8.61 13.8876 9.072 13.7616C9.53759 13.6361 10.0178 13.573 10.5 13.5739C11.9315 13.5637 13.3104 14.1128 14.343 15.1043C14.826 15.5873 15.204 16.1543 15.477 16.8039C15.624 17.1819 15.729 17.5809 15.792 17.9996C14.2422 19.0892 12.3945 19.6753 10.5 19.6783ZM7.287 9.96581C7.10197 9.54216 7.00892 9.08408 7.014 8.62181C7.014 8.16112 7.098 7.69912 7.287 7.27913C7.476 6.85913 7.728 6.48244 8.043 6.16744C8.358 5.85244 8.736 5.60175 9.156 5.41275C9.576 5.22375 10.038 5.13975 10.5 5.13975C10.983 5.13975 11.424 5.22375 11.844 5.41275C12.264 5.60175 12.642 5.85375 12.957 6.16744C13.272 6.48244 13.524 6.86044 13.713 7.27913C13.902 7.69912 13.986 8.16112 13.986 8.62181C13.986 9.10481 13.902 9.54581 13.713 9.9645C13.5306 10.3783 13.2744 10.7554 12.957 11.0775C12.6348 11.3945 12.2577 11.6502 11.844 11.8322C10.9762 12.1888 10.0028 12.1888 9.135 11.8322C8.72132 11.6502 8.34418 11.3945 8.022 11.0775C7.70413 10.7601 7.45407 10.3815 7.287 9.9645V9.96581ZM17.031 16.9299C17.031 16.8879 17.01 16.8669 17.01 16.8249C16.8035 16.1679 16.499 15.5458 16.107 14.9796C15.7146 14.4091 15.2323 13.906 14.679 13.4899C14.2564 13.172 13.7983 12.9042 13.314 12.6919C13.5343 12.5465 13.7385 12.378 13.923 12.1892C14.2361 11.8801 14.511 11.5346 14.742 11.1602C15.2071 10.3961 15.4473 9.51627 15.435 8.62181C15.4415 7.95968 15.3129 7.30317 15.057 6.69244C14.8044 6.10396 14.4407 5.56967 13.986 5.11875C13.5319 4.67254 12.9975 4.31627 12.411 4.06875C11.7993 3.81333 11.1419 3.68516 10.479 3.69206C9.81602 3.68558 9.15866 3.81419 8.547 4.07006C7.9554 4.31706 7.41971 4.68088 6.972 5.13975C6.5258 5.59333 6.16953 6.1273 5.922 6.71344C5.66613 7.32417 5.53751 7.98068 5.544 8.64281C5.544 9.10481 5.607 9.54581 5.733 9.9645C5.859 10.4055 6.027 10.8045 6.258 11.1812C6.468 11.5592 6.762 11.8952 7.077 12.2102C7.266 12.3992 7.476 12.5659 7.707 12.7129C7.22116 12.9308 6.76294 13.2058 6.342 13.5319C5.796 13.9519 5.313 14.4546 4.914 15.0006C4.51796 15.5645 4.21323 16.1872 4.011 16.8459C3.99 16.8879 3.99 16.9299 3.99 16.9509C2.331 15.2723 1.302 13.0069 1.302 10.4895C1.302 5.43375 5.439 1.30069 10.5 1.30069C15.561 1.30069 19.698 5.43375 19.698 10.4895C19.6953 12.9044 18.7364 15.22 17.031 16.9299Z" fill="#272E3E"/>
+                            </svg>
+                        </div>
+                        <div class="header__personal_text">Личный кабинет</div>
+                    </a>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="catalog_part">
+        <div class="container">
+            <div class="catalog_part__content section">
+    <h1 class="catalog_part__title">Запчасти для электродвигателей</h1>
+    <div class="catalog_part__row">
+        <div class="catalog_part__filter filter">
+    <form action="" class="filter__body">
+        <div class="filter__mobile_title">Фильтр <span class="filter__close_btn"></span></div>
+        <div class="filter__float_button btn this--small_rad this--hidden">применить</div>
+        <div class="filter__item">
+            <div class="filter__item_title_wr">
+                <span class="filter__item_arrow rotate">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+                <div class="filter__item_title">Цена</div>
+            </div>
+            <div class="filter__item_body opened">
+                <div class="filter__price_inputs_wr">
+                    от<input class="filter__price_input" type="text" id="minCost" value="1300">
+                    до
+                    <input class="filter__price_input" type="text" id="maxCost" value="1300000"> <span class="filter__price_rubl">₽</span>
+
+                </div>
+                <div class="filter__price_slider_wr">
+                    <div class="filter__price_slider" id="price_slider"></div>
+                </div>
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="filter__item_title_wr">
+                 <span class="filter__item_arrow rotate">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+                <div class="filter__item_title">Тип</div>
+            </div>
+            <div class="filter__item_body opened">
+                <input type="checkbox" id="checkbox_1">
+                <label class="filter__checkbox_label" for="checkbox_1">Пусеты<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_2">
+                <label class="filter__checkbox_label" for="checkbox_2">Конго<span class="filter__label_count">135</span></label>
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="filter__item_title_wr">
+                <span class="filter__item_arrow">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+                <div class="filter__item_title">Материал</div>
+            </div>
+            <div class="filter__item_body">
+                <input type="checkbox" id="checkbox_3">
+                <label class="filter__checkbox_label" for="checkbox_3">Красное золото<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_4">
+                <label class="filter__checkbox_label" for="checkbox_4">Белое золото<span class="filter__label_count">135</span></label>
+                <input type="checkbox" id="checkbox_5">
+                <label class="filter__checkbox_label" for="checkbox_5">Лимонное золото<span class="filter__label_count">5</span></label>
+                <input type="checkbox" id="checkbox_6">
+                <label class="filter__checkbox_label" for="checkbox_6">Родированное <br>серебро<span class="filter__label_count">111</span></label>
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="filter__item_title_wr">
+                <span class="filter__item_arrow">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+                <div class="filter__item_title">Материал вставки</div>
+            </div>
+            <div class="filter__item_body">
+                <input type="checkbox" id="checkbox_7">
+                <label class="filter__checkbox_label" for="checkbox_7">Без вставок<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_8">
+                <label class="filter__checkbox_label" for="checkbox_8">Жемчуг<span class="filter__label_count">135</span></label>
+                <input type="checkbox" id="checkbox_9">
+                <label class="filter__checkbox_label" for="checkbox_9">Фианиты<span class="filter__label_count">5</span></label>
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="filter__item_title_wr">
+                 <span class="filter__item_arrow">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+                <div class="filter__item_title">Для кого</div>
+            </div>
+            <div class="filter__item_body">
+                <input type="checkbox" id="checkbox_10">
+                <label class="filter__checkbox_label" for="checkbox_10">Женщина<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_11">
+                <label class="filter__checkbox_label" for="checkbox_11">Мужчина<span class="filter__label_count">135</span></label>
+                <input type="checkbox" id="checkbox_12">
+                <label class="filter__checkbox_label" for="checkbox_12">Унисекс<span class="filter__label_count">5</span></label>
+                <input type="checkbox" id="checkbox_13">
+                <label class="filter__checkbox_label" for="checkbox_13">Дети<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_14">
+                <label class="filter__checkbox_label" for="checkbox_14">Подарки<span class="filter__label_count">135</span></label>
+                <input type="checkbox" id="checkbox_15">
+                <label class="filter__checkbox_label" for="checkbox_15">Женщина<span class="filter__label_count">5</span></label>
+                <input type="checkbox" id="checkbox_16">
+                <label class="filter__checkbox_label" for="checkbox_16">Мужчина<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_17">
+                <label class="filter__checkbox_label" for="checkbox_17">Подарки<span class="filter__label_count">135</span></label>
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="filter__item_title_wr">
+                <span class="filter__item_arrow">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+                <div class="filter__item_title">Коллекция</div>
+            </div>
+            <div class="filter__item_body">
+                <input type="checkbox" id="checkbox_18">
+                <label class="filter__checkbox_label" for="checkbox_18">Название коллекции<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_19">
+                <label class="filter__checkbox_label" for="checkbox_19">Название коллекции<span class="filter__label_count">135</span></label>
+                <input type="checkbox" id="checkbox_20">
+                <label class="filter__checkbox_label" for="checkbox_20">Название коллекции<span class="filter__label_count">5</span></label>
+                <input type="checkbox" id="checkbox_21">
+                <label class="filter__checkbox_label" for="checkbox_21">Название коллекции<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_22">
+                <label class="filter__checkbox_label" for="checkbox_22">Название коллекции<span class="filter__label_count">135</span></label>
+                <input type="checkbox" id="checkbox_23">
+                <label class="filter__checkbox_label" for="checkbox_23">Название коллекции<span class="filter__label_count">5</span></label>
+                <input type="checkbox" id="checkbox_24">
+                <label class="filter__checkbox_label" for="checkbox_24">Название коллекции<span class="filter__label_count">58</span></label>
+                <input type="checkbox" id="checkbox_25">
+                <label class="filter__checkbox_label" for="checkbox_25">Название коллекции<span class="filter__label_count">135</span></label>
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="filter__item_title_wr">
+                <span class="filter__item_arrow">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+                <div class="filter__item_title">Другое</div>
+            </div>
+            <div class="filter__item_body">
+                <input type="checkbox" id="checkbox_26">
+                <label class="filter__checkbox_label" for="checkbox_26">Straight Line<span class="filter__label_count">135</span></label>
+            </div>
+        </div>
+        <div class="filter__btns_wr">
+            <button class="btn this--width_full filter__btn">применить</button>
+            <button class="btn this--width_full this--wh filter__btn clear_btn">сбросить фильтры</button>
+        </div>
+    </form>
+</div>
+        <div class="catalog__body">
+    <div class="catalog__sort_counts">
+        <div class="catalog__sort">
+            Сортировать по
+            <button class="catalog__sort_btn">
+                <span class="catalog__sort_btn_value">убыванию цены</span>
+                <span class="catalog__sort_btn_arrow">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+            </button>
+            <div class="catalog__sort_radio_group this--hidden">
+                <input type="radio" name="sort" class="catalog__sort_radio" value="убыванию цены" id="radio_1" checked>
+                <label class="catalog__sort_radio_label" for="radio_1">убыванию цены</label>
+                <input type="radio" name="sort" class="catalog__sort_radio" value="возрастанию цены" id="radio_2">
+                <label class="catalog__sort_radio_label" for="radio_2">возрастанию цены</label>
+                <input type="radio" name="sort" class="catalog__sort_radio" value="популярности" id="radio_3">
+                <label class="catalog__sort_radio_label" for="radio_3">популярности</label>
+                <input type="radio" name="sort" class="catalog__sort_radio" value="новизне" id="radio_4">
+                <label class="catalog__sort_radio_label" for="radio_4">новизне</label>
+            </div>
+        </div>
+        <div class="catalog__counts"><span>104</span> товара</div>
+        <button class="catalog__mobile_filter_btn">
+            <img src="/img/catalog/icons/filter-icon.png" alt="">
+            <span class="catalog__mobile_filter_btn_count"></span>
+        </button>
+    </div>
+    <div class="catalog__categories">
+        <a href="#" class="catalog__category">Пусеты</a>
+        <a href="#" class="catalog__category">Конго</a>
+    </div>
+    <div class="catalog__cards item__cards">
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="/detail_size.html" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/1.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="/detail.html" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/2.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/3.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/4.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/5.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/6.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/7.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/8.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/9.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/10.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/11.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/12.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/1.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/2.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/3.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/4.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/5.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/6.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/7.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/8.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/9.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/10.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/11.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+        <div class="item_card this--discount">
+            <button class="item_card__favorite"></button>
+            <a href="#" class="item_card__link">
+                <div class="item_card__top_img">
+                    <img src="/img/catalog/cards_img/12.jpg" alt="">
+                    <div class="item_card__labels">
+                        <span class="item_card__labels_item">NEW</span>
+                        <span class="item_card__labels_item">ХИТ</span>
+                    </div>
+                    <span class="item_card__discount">-15%</span>
+                </div>
+                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
+                <div class="item_card__price">
+                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="catalog__bottom">
+        <div class="catalog__show_counts">Показано товаров: <span class="catalog__show_counts_value">24</span> из <span
+                class="catalog__show_counts_all_value">104</span></div>
+        <a href="#" class="catalog__next_btn btn this--wh">дальше</a>
+        <ul class="catalog__pagination">
+            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link active ">1</a></li>
+            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">2</a></li>
+            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">3</a></li>
+            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">4</a></li>
+            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">5</a></li>
+            <li class="catalog__pagination_item"><span>...</span></li>
+            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">9</a></li>
+        </ul>
+    </div>
+</div>
+    </div>
+</div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__top">
+                <a href="/" class="footer__logo_text">
+                    <div class="footer__logo">
+                        <img src="/img/header/logo.png" alt="">
+                    </div>
+                    <div class="footer__text">
+                        завод по производству<br> запасных частей<br>для электрических машин
+                    </div>
+                </a>
+                <ul class="footer__menu">
+                    <li class="footer__menu_item"><a href="/" class="footer__menu_link">Главная</a></li>
+                    <li class="footer__menu_item"><a href="/catalog.html" class="footer__menu_link">Каталог</a></li>
+                    <li class="footer__menu_item"><a href="#" class="footer__menu_link">О компании</a></li>
+                    <li class="footer__menu_item"><a href="#" class="footer__menu_link">Новости</a></li>
+                    <li class="footer__menu_item"><a href="#" class="footer__menu_link">Контакты</a></li>
+                </ul>
+                <div class="footer__contacts">
+                    <a href="tel:+78124265225" class="footer__tel">+7 (812) 426-52-25</a>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social_link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 0H4C1.791 0 0 1.791 0 4V20C0 22.209 1.791 24 4 24H20C22.209 24 24 22.209 24 20V4C24 1.791 22.209 0 20 0ZM17.1615 17.5C16.552 15.598 15.033 14.1265 13.024 13.9265V17.5H12.714C7.248 17.5 4.13 13.746 4 7.5H6.7385C6.8285 12.0845 8.847 14.0265 10.446 14.427V7.5H13.0245V11.454C14.6035 11.284 16.2625 9.482 16.822 7.5H19.4005C18.971 9.9425 17.172 11.744 15.8925 12.485C17.1715 13.0855 19.2205 14.657 20 17.5H17.1615Z" fill="#818BA1"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social_link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.1429 0H2.85714C1.28 0 0 1.28 0 2.85714V21.1429C0 22.72 1.28 24 2.85714 24H21.1429C22.72 24 24 22.72 24 21.1429V2.85714C24 1.28 22.72 0 21.1429 0ZM7.42857 9.14286V20H4V9.14286H7.42857ZM4 5.98286C4 5.18286 4.68571 4.57143 5.71429 4.57143C6.74286 4.57143 7.38857 5.18286 7.42857 5.98286C7.42857 6.78286 6.78857 7.42857 5.71429 7.42857C4.68571 7.42857 4 6.78286 4 5.98286ZM20 20H16.5714C16.5714 20 16.5714 14.7086 16.5714 14.2857C16.5714 13.1429 16 12 14.5714 11.9771H14.5257C13.1429 11.9771 12.5714 13.1543 12.5714 14.2857C12.5714 14.8057 12.5714 20 12.5714 20H9.14286V9.14286H12.5714V10.6057C12.5714 10.6057 13.6743 9.14286 15.8914 9.14286C18.16 9.14286 20 10.7029 20 13.8629V20Z" fill="#818BA1"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social_link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0C1.79086 0 0 1.79086 0 4V20C0 22.2091 1.79086 24 4 24H20C22.2091 24 24 22.2091 24 20V4C24 1.79086 22.2091 0 20 0H4ZM17.2977 5.50292C17.6966 5.34155 18.0824 5.37158 18.3281 5.58146C18.5043 5.73161 18.6864 6.03719 18.5554 6.63779L16.4082 17.8832C16.3902 17.9301 16.2179 18.3436 15.7873 18.5218C15.6608 18.5739 15.5285 18.6 15.3906 18.6C15.2121 18.6 15.0251 18.5564 14.8299 18.4693L14.7615 18.4281L11.8869 16.1692L10.1063 17.8334C9.94774 17.9588 9.70276 18.0463 9.45648 17.9506C9.1758 17.8644 9.01565 17.446 8.91739 17.1275C8.77196 16.6559 8.15369 14.5818 7.90753 13.756C7.88705 13.6872 7.86914 13.6272 7.8543 13.5774L4.94175 12.5725C4.86904 12.5458 4.27363 12.3141 4.2055 11.7548C4.1292 11.1344 4.87002 10.8559 4.95485 10.8262C5.42122 10.6239 16.8775 5.67254 17.2971 5.50292H17.2977ZM9.44043 16.6193L10.423 13.9793L15.9906 7.70931L8.4579 13.3193L9.44043 16.6193Z" fill="#818BA1"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__address_wr">
+                    <div class="footer__address">г. Санкт-Петербург, ул. Стахановцев, д. 14, корп. 1 литер А, пом. 6-Н офис 2А</div>
+                    <div class="footer__time">ПН–ПТ 10:00 – 18:00</div>
+                </div>
+                <form action="" name="footer__form" class="footer__form">
+                    <div class="footer__form_input_wr">
+                        <label for="footer__form_email" class="footer__form_label">Подпишитесь на рассылку</label>
+                        <input class="footer__form_input" type="email" name="email" id="footer__form_email" placeholder="Ваш e-mail">
+                    </div>
+                    <input type="submit" value="Подписаться" class="footer__form_btn btn">
+                </form>
+                <div class="footer__copyright_designed">
+                    <div class="footer__copyright">© Все права защищены</div>
+                    <div class="footer__designed">
+                        <div class="footer__designed_text">Разработка сайта</div>
+                        <div class="footer__designed_img">
+                            <img src="/img/footer/profitkit.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/catalog_part.js"></script>
+</body>
+
+</html>
