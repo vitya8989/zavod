@@ -1,0 +1,134 @@
+.catalog_reviews {
+  background: #FFFFFF;
+}
+.catalog_reviews__slider_wr {
+  margin-top: 40px;
+  position: relative;
+  padding-bottom: 40px;
+  @media ($tablet2) {
+    margin-top: 20px;
+    padding-bottom: 25px;
+  }
+}
+.catalog_slider {
+  overflow: hidden;
+}
+.catalog_slider__slide.swiper-slide {
+  height: auto;
+}
+.catalog_reviews__slider_btn_prev,
+.catalog_reviews__slider_btn_next {
+  position: absolute;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #D2D5E4;
+  transition: 0.2s;
+  top: calc(50% - 22px);
+
+  @media ($desktopBig) {
+    top: -91px;
+  }
+  @media ($tablet2) {
+    display: none;
+  }
+
+  &:hover {
+    background: #FF4901;
+    border: 2px solid #FF4901;
+    &::before,
+    &::after {
+      background: #F9F9FB;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: #D2D5E4;
+    left: calc(50% - 6px);
+    transition: 0.2s;
+  }
+  &::before {
+    top: 16px;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    bottom: 16px;
+    transform: rotate(45deg);
+  }
+}
+.catalog_reviews__slider_btn_prev {
+  left: -74px;
+  @media ($desktopBig) {
+    left: auto;
+    right: 59px;
+  }
+}
+.catalog_reviews__slider_btn_next {
+  transform: rotate(180deg);
+  right: -74px;
+  @media ($desktopBig) {
+    right: 0;
+  }
+}
+
+.catalog_reviews__slider_pagination {
+  &.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    bottom: -5px;
+    .swiper-pagination-bullet {
+      background: #D0D6E4;
+      width: 10px;
+      height: 10px;
+      margin: 0 7.5px;
+      opacity: 1;
+      &.swiper-pagination-bullet-active {
+        background: #FF4901;
+      }
+    }
+  }
+}
+
+.catalog_review {
+  background: #F2F4FF;
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+}
+.catalog_review__top {
+  display: flex;
+}
+.catalog_review__img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  flex: 0 0 auto;
+}
+.catalog_review__name {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+.catalog_review__date {
+  line-height: 1.17;
+  color: #828894;
+  margin-top: 5px;
+}
+.catalog_review__body {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  line-height: 1.56;
+
+  @media ($mobile) {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}

@@ -1,19 +1,20 @@
 .catalog__body {
   flex: 1 1 auto;
 }
-.catalog__title {
-  text-align: center;
-  @media ($mobile) {
-    text-align: left;
+.catalog_categories__mob_wr {
+  @media ($tablet2Max) {
+    display: none;
   }
+  max-width: 400px;
 }
-.catalog__sort_counts {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media ($mobile) {
-    position: relative;
+.catalog__sort_filter {
+  margin-top: 40px;
+
+  @media ($tablet2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
   }
 }
 .catalog__sort {
@@ -104,6 +105,7 @@
 }
 .catalog__sort_radio_label {
   display: block;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.31;
   padding: 7px 0 7px 35px;
@@ -118,7 +120,7 @@
     left: 0;
     top: 50%;
     background: #FFFFFF;
-    border: 1px solid #F9C859;
+    border: 1px solid #D2D5E4;
     border-radius: 20px;
     transition: 0.3s;
     transform: translateY(-50%);
@@ -131,7 +133,7 @@
     left: 8px;
     top: 50%;
     transform: translateY(-50%);
-    background: #FFFBF2;
+    background: #F9F9FB;
     border-radius: 20px;
     transition: 0.3s;
     opacity: 0;
@@ -139,9 +141,9 @@
   }
   &:hover {
     @media ($tablet2Max) {
-      color: #A27207;
+      color: #FF4901;
       &::before {
-        background: #FFFBF2;
+        border: 1px solid #FF4901;
       }
     }
   }
@@ -163,7 +165,8 @@
     visibility: visible;
   }
   &::before {
-    background: #F9C859;
+    background: #FF4901;
+    border: 1px solid #FF4901;
   }
 }
 
@@ -189,8 +192,8 @@
     display: none;
   }
   position: relative;
-  width: 54px;
-  height: 40px;
+  width: 21px;
+  height: 17px;
   flex: 0 0 auto;
   img {
     width: 100%;
@@ -260,35 +263,35 @@
   flex-direction: column;
   align-items: center;
 }
-.catalog__show_counts {
-  font-weight: 400;
-  line-height: 1.75;
-  text-align: center;
-}
-.catalog__show_counts_value,
-.catalog__show_counts_all_value {
-  font-family: Michroma;
-}
+
 .catalog__next_btn {
-  margin-top: 10px;
+  &.this--wh {
+    border: 2px solid #D2D5E4;
+  }
 }
 .catalog__pagination {
-  margin-top: 20px;
+  margin-top: 35px;
   list-style-type: none;
   display: flex;
-  margin-left: -7px;
+  margin-left: -10px;
+  @media ($mobileMiddle) {
+    margin-left: -3px;
+  }
 }
 .catalog__pagination_item {
-  margin-left: 7px;
+  margin-left: 10px;
   span {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
-    color: #000000;
-    font-family: Michroma;
-    font-weight: 400;
+    width: 40px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  @media ($mobileMiddle) {
+    margin-left: 3px;
   }
 }
 .catalog__pagination_link {
@@ -296,23 +299,59 @@
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  width: 35px;
-  height: 35px;
-  color: #000000;
-  border: 1px solid #FFFBF2;
+  width: 40px;
+  height: 40px;
   transition: 0.3s;
-  font-family: Michroma;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.3;
 
   &:hover {
     @media ($tablet2Max) {
-      background: #FFFFFF;
-      border: 1px solid #F9C859;
+      border: 1px solid #FF4901;
     }
   }
 
   &.active {
-    border: 1px solid #F9C859;
-    background: #F9C859;
+    border: 1px solid #FF4901;
+    background: #FF4901;
+    color: #F9F9FB;
   }
+}
+.catalog__pagination_prev,
+.catalog__pagination_next {
+  display: inline-block;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+  position: relative;
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  &:hover {
+    @media ($tablet2Max) {
+      border: 1px solid #FF4901;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    width: 9px;
+    height: 2px;
+    background: #272E3E;
+  }
+  &::before {
+    top: 16px;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    bottom: 15px;
+    transform: rotate(45deg);
+  }
+}
+.catalog__pagination_next {
+  transform: rotate(180deg);
 }

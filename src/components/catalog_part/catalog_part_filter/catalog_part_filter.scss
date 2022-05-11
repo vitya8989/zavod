@@ -11,15 +11,13 @@
 
   @media ($tablet2) {
     position: fixed;
-    top: 112px;
+    top: 97px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 112px);
-    max-height: calc(100vh - 112px);
-    background: #ffffff;
+    height: calc(100vh - 97px);
+    max-height: calc(100vh - 97px);
     z-index: 40;
     overflow-y: auto;
-    padding-bottom: 20px;
     opacity: 0;
     visibility: hidden;
     transform: translateX(200%);
@@ -29,6 +27,11 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+  @media ($mobile) {
+    top: 139px;
+    height: calc(100vh - 139px);
+    max-height: calc(100vh - 139px);
   }
   input[type="checkbox"] {
     visibility: hidden;
@@ -51,10 +54,13 @@
   }
 }
 .filter__close_btn {
+  @media($tablet2Max) {
+    display: none;
+  }
   position: absolute;
   width: 45px;
   height: 45px;
-  right: 10px;
+  right: 0;
   top: 10px;
   cursor: pointer;
 
@@ -82,6 +88,8 @@
   background: #FFFFFF;
   border-radius: 15px;
   @media ($tablet2) {
+    min-height: 100%;
+    border-radius: 0;
     &.this--big_pb {
       padding-bottom: 160px;
     }
@@ -90,11 +98,14 @@
 
 .filter__float_button{
   position: absolute;
-  left: 255px;
+  left: 295px;
   top: 0;
   z-index: 30;
   overflow: visible;
   cursor: pointer;
+  background: #FF4901;
+  border: 2px solid #FF4901;
+  color: #ffffff;
   @media ($tablet2) {
     display: none;
   }
@@ -109,18 +120,23 @@
     height: 0;
     border-style: solid;
     border-width: 7px 14px 7px 0;
-    border-color: transparent #F9C859 transparent transparent;
+    border-color: transparent #FF4901 transparent transparent;
     z-index: 30;
     transition: 0.3s;
   }
 
-  &:hover {
-    &::before {
-      border-color: transparent #D59A14 transparent transparent;
-    }
-  }
   &.this--hidden {
     display: none;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      color: #272E3E;
+      background: #FFBF33;
+      border: 2px solid #FFBF33;
+      &::before {
+        border-color: transparent #FFBF33 transparent transparent;
+      }
+    }
   }
 }
 
@@ -146,7 +162,7 @@
     justify-content: space-between;
   }
 
-  &:hover {
+  /* &:hover {
     @media ($tablet2Max) {
       .filter__item_title {
         color: #A27207;
@@ -159,7 +175,7 @@
         }
       }
     }
-  }
+  } */
 }
 .filter__item_arrow {
   margin-bottom: 5px;
@@ -179,10 +195,139 @@
   font-size: 1.6rem;
   line-height: 1.15;
   transition: 0.3s;
+  &.this--pos_rel {
+    position: relative;
+  }
 }
 .filter__item_body {
   @media ($tablet2) {
-    padding: 0 20px;
+    padding: 0 20px 20px;
+  }
+}
+.filter__item_tooltip {
+  position: absolute;
+  right: -33px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #D2D5E4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #D2D5E4;
+  font-weight: 400;
+  &:hover {
+    @media ($tablet2Max) {
+      .filter__item_tooltip_body {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.filter__item_tooltip_body {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 5px;
+  color: #272E3E;
+  font-size: 1.2rem;
+  line-height: 1.33;
+  width: 185px;
+  height: 46px;
+  top: -8px;
+  left: 35px;
+  padding: 7px 10px;
+  box-shadow: -3px 4px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    transform: translateY(-50%);
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 10px 5px 0;
+    border-color: transparent #ffffff transparent transparent;
+    z-index: 30;
+    transition: 0.3s;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media ($tablet2) {
+    top: -60px;
+    left: -85px;
+    &::before {
+      top: calc(100% - 2px);
+      left: 50%;
+      transform: rotate(-90deg) translateY(-50%);
+    }
+  }
+}
+
+.filter__radio {
+  display: none;
+}
+.filter__radio_label {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.17;
+  padding: 9px 0 9px 35px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 50%;
+    background: #FFFFFF;
+    border: 1px solid #D2D5E4;
+    border-radius: 20px;
+    transition: 0.3s;
+    transform: translateY(-50%);
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    width: 9px;
+    height: 9px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F9F9FB;
+    border-radius: 20px;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      color: #FF4901;
+      &::before {
+        border: 1px solid #FF4901;
+      }
+    }
+  }
+}
+
+.filter__radio:checked + .filter__radio_label {
+  &::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  &::before {
+    background: #FF4901;
+    border: 1px solid #FF4901;
   }
 }
 
@@ -195,18 +340,7 @@
   cursor: pointer;
   transition: 0.3s;
   margin-bottom: 5px;
-  @media ($tablet2) {
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 20px;
-    background: #FFFFFF;
-    border: 1px solid #4A4A4A;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    br {
-      display: none;
-    }
-  }
+
   &::before {
     position: absolute;
     content: '';
@@ -215,13 +349,9 @@
     left: 0;
     top: 17px;
     background: #FFFFFF;
-    border: 1px solid #F9C859;
+    border: 1px solid #D2D5E4;
     transition: 0.3s;
     transform: translateY(-50%);
-
-    @media ($tablet2) {
-      display: none;
-    }
   }
   &::after {
     position: absolute;
@@ -231,19 +361,16 @@
     left: 8px;
     top: 17px;
     transform: translateY(-50%);
-    background: #FFFBF2;
+    background: #F9F9FB;
     transition: 0.3s;
     opacity: 0;
     visibility: hidden;
-    @media ($tablet2) {
-      display: none;
-    }
   }
   &:hover {
     @media ($tablet2Max) {
-      color: #A27207;
+      color: #FF4901;
       &::before {
-        background: #FFFBF2;
+        border: 1px solid #FF4901;
       }
     }
   }
@@ -255,14 +382,8 @@ input[type="checkbox"]:checked + .filter__checkbox_label  {
     visibility: visible;
   }
   &::before {
-    background: #F9C859;
-  }
-  @media ($tablet2) {
-    background: #F9C859;
-    border: 1px solid #F9C859;
-    .filter__label_count {
-      color: #4A4A4A;
-    }
+    border: 1px solid #FF4901;
+    background: #FF4901
   }
 }
 
@@ -394,21 +515,34 @@ input[type="checkbox"]:checked + .filter__checkbox_label  {
 .filter__btns_wr {
   margin-bottom: -10px;
   @media ($tablet2) {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    &.show {
-      opacity: 1;
-      visibility: visible;
-    }
+    max-width: 325px;
+    margin: 10px auto 0;
   }
 }
 .filter__btn {
   margin-bottom: 10px;
   @media ($tablet2) {
     width: 335px;
+  }
+  &.this--wh {
+    border: 2px solid #D2D5E4;
+    &:hover {
+      @media ($tablet2Max) {
+        background: #272E3E;
+        border: 2px solid #272E3E;
+      }
+    }
+  }
+  &.this--red {
+    background: #FF4901;
+    border: 2px solid #FF4901;
+    color: #ffffff;
+    &:hover {
+      @media ($tablet2Max) {
+        color: #272E3E;
+        background: #FFBF33;
+        border: 2px solid #FFBF33;
+      }
+    }
   }
 }

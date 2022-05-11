@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Раздел каталога</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/sumoselect.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -113,7 +115,7 @@
         <div class="catalog_part__filter filter">
     <form action="" class="filter__body">
         <div class="filter__mobile_title">Фильтр <span class="filter__close_btn"></span></div>
-        <div class="filter__float_button btn this--small_rad this--hidden">применить</div>
+        <div class="filter__float_button btn this--hidden">Применить (53)</div>
         <div class="filter__item">
             <div class="filter__item_title_wr">
                 <span class="filter__item_arrow rotate">
@@ -144,13 +146,27 @@
       fill="black"/>
 </svg>
                 </span>
-                <div class="filter__item_title">Тип</div>
+                <div class="filter__item_title this--pos_rel">
+                    Тип оборудования
+                    <div class="filter__item_tooltip">?
+                        <div class="filter__item_tooltip_body">Оборудование, на которое устанавливается двигатель</div></div>
+                </div>
             </div>
             <div class="filter__item_body opened">
-                <input type="checkbox" id="checkbox_1">
-                <label class="filter__checkbox_label" for="checkbox_1">Пусеты<span class="filter__label_count">58</span></label>
-                <input type="checkbox" id="checkbox_2">
-                <label class="filter__checkbox_label" for="checkbox_2">Конго<span class="filter__label_count">135</span></label>
+                <input type="radio" name="type" class="filter__radio" value="Автосамосвал" id="radio_1" checked>
+                <label class="filter__radio_label" for="radio_1">Автосамосвал</label>
+                <input type="radio" name="type" class="filter__radio" value="Экскаватор" id="radio_2">
+                <label class="filter__radio_label" for="radio_2">Экскаватор</label>
+                <input type="radio" name="type" class="filter__radio" value="Автосамосвал" id="radio_3">
+                <label class="filter__radio_label" for="radio_3">Автосамосвал</label>
+                <input type="radio" name="type" class="filter__radio" value="Экскаватор" id="radio_4">
+                <label class="filter__radio_label" for="radio_4">Экскаватор</label>
+                <input type="radio" name="type" class="filter__radio" value="Экскаватор" id="radio_5">
+                <label class="filter__radio_label" for="radio_5">Экскаватор</label>
+                <input type="radio" name="type" class="filter__radio" value="Экскаватор" id="radio_6">
+                <label class="filter__radio_label" for="radio_6">Экскаватор</label>
+                <input type="radio" name="type" class="filter__radio" value="Экскаватор" id="radio_7">
+                <label class="filter__radio_label" for="radio_7">Экскаватор</label>
             </div>
         </div>
         <div class="filter__item">
@@ -161,36 +177,30 @@
       fill="black"/>
 </svg>
                 </span>
-                <div class="filter__item_title">Материал</div>
+                <div class="filter__item_title">Оборудование</div>
+            </div>
+            <div class="filter__item_body">
+                <input type="checkbox" id="checkbox_1">
+                <label class="filter__checkbox_label" for="checkbox_1">ЭКГ-5А</label>
+                <input type="checkbox" id="checkbox_2">
+                <label class="filter__checkbox_label" for="checkbox_2">ЭКГ-8И</label>
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="filter__item_title_wr">
+                <span class="filter__item_arrow">
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+      fill="black"/>
+</svg>
+                </span>
+                <div class="filter__item_title">Двигатель</div>
             </div>
             <div class="filter__item_body">
                 <input type="checkbox" id="checkbox_3">
-                <label class="filter__checkbox_label" for="checkbox_3">Красное золото<span class="filter__label_count">58</span></label>
+                <label class="filter__checkbox_label" for="checkbox_3">ДЭ-812</label>
                 <input type="checkbox" id="checkbox_4">
-                <label class="filter__checkbox_label" for="checkbox_4">Белое золото<span class="filter__label_count">135</span></label>
-                <input type="checkbox" id="checkbox_5">
-                <label class="filter__checkbox_label" for="checkbox_5">Лимонное золото<span class="filter__label_count">5</span></label>
-                <input type="checkbox" id="checkbox_6">
-                <label class="filter__checkbox_label" for="checkbox_6">Родированное <br>серебро<span class="filter__label_count">111</span></label>
-            </div>
-        </div>
-        <div class="filter__item">
-            <div class="filter__item_title_wr">
-                <span class="filter__item_arrow">
-                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
-      fill="black"/>
-</svg>
-                </span>
-                <div class="filter__item_title">Материал вставки</div>
-            </div>
-            <div class="filter__item_body">
-                <input type="checkbox" id="checkbox_7">
-                <label class="filter__checkbox_label" for="checkbox_7">Без вставок<span class="filter__label_count">58</span></label>
-                <input type="checkbox" id="checkbox_8">
-                <label class="filter__checkbox_label" for="checkbox_8">Жемчуг<span class="filter__label_count">135</span></label>
-                <input type="checkbox" id="checkbox_9">
-                <label class="filter__checkbox_label" for="checkbox_9">Фианиты<span class="filter__label_count">5</span></label>
+                <label class="filter__checkbox_label" for="checkbox_4">ДЭ-812</label>
             </div>
         </div>
         <div class="filter__item">
@@ -201,25 +211,15 @@
       fill="black"/>
 </svg>
                 </span>
-                <div class="filter__item_title">Для кого</div>
+                <div class="filter__item_title">Напряжение</div>
             </div>
             <div class="filter__item_body">
-                <input type="checkbox" id="checkbox_10">
-                <label class="filter__checkbox_label" for="checkbox_10">Женщина<span class="filter__label_count">58</span></label>
-                <input type="checkbox" id="checkbox_11">
-                <label class="filter__checkbox_label" for="checkbox_11">Мужчина<span class="filter__label_count">135</span></label>
-                <input type="checkbox" id="checkbox_12">
-                <label class="filter__checkbox_label" for="checkbox_12">Унисекс<span class="filter__label_count">5</span></label>
-                <input type="checkbox" id="checkbox_13">
-                <label class="filter__checkbox_label" for="checkbox_13">Дети<span class="filter__label_count">58</span></label>
-                <input type="checkbox" id="checkbox_14">
-                <label class="filter__checkbox_label" for="checkbox_14">Подарки<span class="filter__label_count">135</span></label>
-                <input type="checkbox" id="checkbox_15">
-                <label class="filter__checkbox_label" for="checkbox_15">Женщина<span class="filter__label_count">5</span></label>
-                <input type="checkbox" id="checkbox_16">
-                <label class="filter__checkbox_label" for="checkbox_16">Мужчина<span class="filter__label_count">58</span></label>
-                <input type="checkbox" id="checkbox_17">
-                <label class="filter__checkbox_label" for="checkbox_17">Подарки<span class="filter__label_count">135</span></label>
+                <input type="checkbox" id="checkbox_5">
+                <label class="filter__checkbox_label" for="checkbox_5">300 В</label>
+                <input type="checkbox" id="checkbox_6">
+                <label class="filter__checkbox_label" for="checkbox_6">600 В</label>
+                <input type="checkbox" id="checkbox_7">
+                <label class="filter__checkbox_label" for="checkbox_7">605 В</label>
             </div>
         </div>
         <div class="filter__item">
@@ -230,517 +230,1119 @@
       fill="black"/>
 </svg>
                 </span>
-                <div class="filter__item_title">Коллекция</div>
+                <div class="filter__item_title">Мощность</div>
             </div>
             <div class="filter__item_body">
                 <input type="checkbox" id="checkbox_18">
-                <label class="filter__checkbox_label" for="checkbox_18">Название коллекции<span class="filter__label_count">58</span></label>
+                <label class="filter__checkbox_label" for="checkbox_18">100 кВт</label>
                 <input type="checkbox" id="checkbox_19">
-                <label class="filter__checkbox_label" for="checkbox_19">Название коллекции<span class="filter__label_count">135</span></label>
+                <label class="filter__checkbox_label" for="checkbox_19">500 кВт</label>
                 <input type="checkbox" id="checkbox_20">
-                <label class="filter__checkbox_label" for="checkbox_20">Название коллекции<span class="filter__label_count">5</span></label>
-                <input type="checkbox" id="checkbox_21">
-                <label class="filter__checkbox_label" for="checkbox_21">Название коллекции<span class="filter__label_count">58</span></label>
-                <input type="checkbox" id="checkbox_22">
-                <label class="filter__checkbox_label" for="checkbox_22">Название коллекции<span class="filter__label_count">135</span></label>
-                <input type="checkbox" id="checkbox_23">
-                <label class="filter__checkbox_label" for="checkbox_23">Название коллекции<span class="filter__label_count">5</span></label>
-                <input type="checkbox" id="checkbox_24">
-                <label class="filter__checkbox_label" for="checkbox_24">Название коллекции<span class="filter__label_count">58</span></label>
-                <input type="checkbox" id="checkbox_25">
-                <label class="filter__checkbox_label" for="checkbox_25">Название коллекции<span class="filter__label_count">135</span></label>
-            </div>
-        </div>
-        <div class="filter__item">
-            <div class="filter__item_title_wr">
-                <span class="filter__item_arrow">
-                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
-      fill="black"/>
-</svg>
-                </span>
-                <div class="filter__item_title">Другое</div>
-            </div>
-            <div class="filter__item_body">
-                <input type="checkbox" id="checkbox_26">
-                <label class="filter__checkbox_label" for="checkbox_26">Straight Line<span class="filter__label_count">135</span></label>
+                <label class="filter__checkbox_label" for="checkbox_20">100 МВт</label>
             </div>
         </div>
         <div class="filter__btns_wr">
-            <button class="btn this--width_full filter__btn">применить</button>
-            <button class="btn this--width_full this--wh filter__btn clear_btn">сбросить фильтры</button>
+            <button class="btn this--width_full filter__btn this--red">Показать 53 товара</button>
+            <button class="btn this--width_full this--wh filter__btn clear_btn">Сбросить фильтры</button>
         </div>
     </form>
 </div>
         <div class="catalog__body">
-    <div class="catalog__sort_counts">
+    <div class="main_catalog__items this--catalog_categories">
+        <a href="#" class="main_catalog__item">
+            <div class="main_catalog__item_img_wr">
+                <div class="main_catalog__item_img">
+                    <img src="/img/main/main_catalog/1.png" alt="">
+                </div>
+            </div>
+            <div class="main_catalog__text">Секции якоря</div>
+        </a>
+        <a href="#" class="main_catalog__item">
+            <div class="main_catalog__item_img_wr">
+                <div class="main_catalog__item_img">
+                    <img src="/img/main/main_catalog/1.png" alt="">
+                </div>
+            </div>
+            <div class="main_catalog__text">Заголовок подкатегории в две строки</div>
+        </a>
+        <a href="#" class="main_catalog__item">
+            <div class="main_catalog__item_img_wr">
+                <div class="main_catalog__item_img">
+                    <img src="/img/main/main_catalog/1.png" alt="">
+                </div>
+            </div>
+            <div class="main_catalog__text">Заголовок подкатегории</div>
+        </a>
+        <a href="#" class="main_catalog__item">
+            <div class="main_catalog__item_img_wr">
+                <div class="main_catalog__item_img">
+                    <img src="/img/main/main_catalog/1.png" alt="">
+                </div>
+            </div>
+            <div class="main_catalog__text">Секции якоря</div>
+        </a>
+        <a href="#" class="main_catalog__item">
+            <div class="main_catalog__item_img_wr">
+                <div class="main_catalog__item_img">
+                    <img src="/img/main/main_catalog/1.png" alt="">
+                </div>
+            </div>
+            <div class="main_catalog__text">Заголовок подкатегории</div>
+        </a>
+        <a href="#" class="main_catalog__item">
+            <div class="main_catalog__item_img_wr">
+                <div class="main_catalog__item_img">
+                    <img src="/img/main/main_catalog/1.png" alt="">
+                </div>
+            </div>
+            <div class="main_catalog__text">Заголовок подкатегории в две строки</div>
+        </a>
+        <a href="#" class="main_catalog__item">
+            <div class="main_catalog__item_img_wr">
+                <div class="main_catalog__item_img">
+                    <img src="/img/main/main_catalog/1.png" alt="">
+                </div>
+            </div>
+            <div class="main_catalog__text">Секции якоря</div>
+        </a>
+        <a href="#" class="main_catalog__item">
+            <div class="main_catalog__item_img_wr">
+                <div class="main_catalog__item_img">
+                    <img src="/img/main/main_catalog/3.png" alt="">
+                </div>
+            </div>
+            <div class="main_catalog__text">Заголовок подкатегории в две строки</div>
+        </a>
+    </div>
+    <div class="catalog_categories__mob_wr input_wr">
+        <select class="catalog_categories__mob select" name="city" id="registration_city">
+            <option value="Все категории" selected>Все категории</option>
+            <option value="Секции якоря">Секции якоря</option>
+            <option value="Заголовок подкатегории в две строки">Заголовок подкатегории в две строки</option>
+            <option value="Заголовок подкатегории">Заголовок подкатегории </option>
+            <option value="Секции якоря">Секции якоря</option>
+            <option value="Заголовок подкатегории">Заголовок подкатегории </option>
+            <option value="Заголовок подкатегории в две строки">Заголовок подкатегории в две строки</option>
+            <option value="Секции якоря">Секции якоря</option>
+            <option value="Заголовок подкатегории в две строки">Заголовок подкатегории в две строки</option>
+        </select>
+    </div>
+    <div class="catalog__sort_filter">
         <div class="catalog__sort">
             Сортировать по
             <button class="catalog__sort_btn">
                 <span class="catalog__sort_btn_value">убыванию цены</span>
                 <span class="catalog__sort_btn_arrow">
-                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
-      fill="black"/>
-</svg>
-                </span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM5 5L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L5 5ZM9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L9.70711 1.70711ZM0.292893 1.70711L4.29289 5.70711L5.70711 4.29289L1.70711 0.292893L0.292893 1.70711ZM5.70711 5.70711L9.70711 1.70711L8.29289 0.292893L4.29289 4.29289L5.70711 5.70711Z"
+          fill="black"/>
+    </svg>
+                    </span>
             </button>
             <div class="catalog__sort_radio_group this--hidden">
-                <input type="radio" name="sort" class="catalog__sort_radio" value="убыванию цены" id="radio_1" checked>
-                <label class="catalog__sort_radio_label" for="radio_1">убыванию цены</label>
-                <input type="radio" name="sort" class="catalog__sort_radio" value="возрастанию цены" id="radio_2">
-                <label class="catalog__sort_radio_label" for="radio_2">возрастанию цены</label>
-                <input type="radio" name="sort" class="catalog__sort_radio" value="популярности" id="radio_3">
-                <label class="catalog__sort_radio_label" for="radio_3">популярности</label>
-                <input type="radio" name="sort" class="catalog__sort_radio" value="новизне" id="radio_4">
-                <label class="catalog__sort_radio_label" for="radio_4">новизне</label>
+                <input type="radio" name="sort" class="catalog__sort_radio" value="убыванию цены" id="radio_8" checked>
+                <label class="catalog__sort_radio_label" for="radio_8">убыванию цены</label>
+                <input type="radio" name="sort" class="catalog__sort_radio" value="возрастанию цены" id="radio_9">
+                <label class="catalog__sort_radio_label" for="radio_9">возрастанию цены</label>
+                <input type="radio" name="sort" class="catalog__sort_radio" value="популярности" id="radio_10">
+                <label class="catalog__sort_radio_label" for="radio_10">популярности</label>
+                <input type="radio" name="sort" class="catalog__sort_radio" value="новизне" id="radio_11">
+                <label class="catalog__sort_radio_label" for="radio_11">новизне</label>
             </div>
         </div>
-        <div class="catalog__counts"><span>104</span> товара</div>
+
         <button class="catalog__mobile_filter_btn">
-            <img src="/img/catalog/icons/filter-icon.png" alt="">
+            <img src="/img/icons/filter_icon.png" alt="">
             <span class="catalog__mobile_filter_btn_count"></span>
         </button>
     </div>
-    <div class="catalog__categories">
-        <a href="#" class="catalog__category">Пусеты</a>
-        <a href="#" class="catalog__category">Конго</a>
-    </div>
+
     <div class="catalog__cards item__cards">
         <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="/detail_size.html" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/1.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
                     </div>
-                    <span class="item_card__discount">-15%</span>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
                 <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                    5000 ₽ <span class="item_card__price_old">6500 ₽</span>
                 </div>
-            </a>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
+        </div>
+        <div class="item_card">
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812 дополнительная строка</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_card__price">
+                    4567 ₽ <span class="item_card__price_old"></span>
+                </div>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
+        </div>
+        <div class="item_card">
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812 дополнительная строка</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_card__price">
+                    4567 ₽ <span class="item_card__price_old"></span>
+                </div>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
+        </div>
+        <div class="item_card">
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812 дополнительная строка</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_card__price">
+                    4567 ₽ <span class="item_card__price_old"></span>
+                </div>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
+        </div>
+        <div class="item_card">
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812 дополнительная строка</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_card__price">
+                    4567 ₽ <span class="item_card__price_old"></span>
+                </div>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
         </div>
         <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="/detail.html" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/2.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
                     </div>
-                    <span class="item_card__discount">-15%</span>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
                 <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                    5000 ₽ <span class="item_card__price_old">6500 ₽</span>
                 </div>
-            </a>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
         </div>
         <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/3.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
                     </div>
-                    <span class="item_card__discount">-15%</span>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
                 <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                    5000 ₽ <span class="item_card__price_old">6500 ₽</span>
                 </div>
-            </a>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
+        </div>
+        <div class="item_card">
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812 дополнительная строка</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_card__price">
+                    4567 ₽ <span class="item_card__price_old"></span>
+                </div>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
+        </div>
+        <div class="item_card">
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812 дополнительная строка</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_card__price">
+                    4567 ₽ <span class="item_card__price_old"></span>
+                </div>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
+        </div>
+        <div class="item_card">
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812 дополнительная строка</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_card__price">
+                    4567 ₽ <span class="item_card__price_old"></span>
+                </div>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
+        </div>
+        <div class="item_card">
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
+                    </div>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812 дополнительная строка</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
+                    </div>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_card__price">
+                    4567 ₽ <span class="item_card__price_old"></span>
+                </div>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
+                </div>
+            </div>
         </div>
         <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/4.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+            <div class="item_card__link">
+                <a href="#" class="item_card__top_img_wr">
+                    <div class="item_card__top_img">
+                        <img src="/img/catalog_part/1.png" alt="">
                     </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/5.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+                </a>
+                <a href="#" class="item_card__title">Секции якоря для ДЭ-812</a>
+                <div class="item_card__column">
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Мощность</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>100 кВт</span>
+                        </div>
                     </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/6.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Напряжение</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>305 В</span>
+                        </div>
                     </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/7.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Частота вращения</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>1200 об./мин</span>
+                        </div>
                     </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/8.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Тип оборудования</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>Экскаватор</span>
+                        </div>
                     </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/9.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
+                    <div class="item_card__group">
+                        <div class="item_card__label">
+                            <span>Оборудование</span>
+                        </div>
+                        <span class="item_card__line"></span>
+                        <div class="item_card__value">
+                            <span>ЭШ-6/45, ЭКГ-12.5, ЭКГ-10, ЭКГ-8И</span>
+                        </div>
                     </div>
-                    <span class="item_card__discount">-15%</span>
                 </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
                 <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
+                    5000 ₽ <span class="item_card__price_old">6500 ₽</span>
                 </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/10.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
+                <div class="item_card__btn btn this--width_full">В корзину</div>
+                <div class="item_card__ordering">
+                    <button class="item_card__ordering_minus"></button>
+                    <div class="item_card__ordering_value">0</div>
+                    <button class="item_card__ordering_plus"></button>
                 </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/11.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/12.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/1.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/2.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/3.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/4.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/5.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/6.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/7.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/8.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/9.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/10.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/11.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
-        </div>
-        <div class="item_card this--discount">
-            <button class="item_card__favorite"></button>
-            <a href="#" class="item_card__link">
-                <div class="item_card__top_img">
-                    <img src="/img/catalog/cards_img/12.jpg" alt="">
-                    <div class="item_card__labels">
-                        <span class="item_card__labels_item">NEW</span>
-                        <span class="item_card__labels_item">ХИТ</span>
-                    </div>
-                    <span class="item_card__discount">-15%</span>
-                </div>
-                <div class="item_card__text">Кольцо из белого золота с бриллиантами</div>
-                <div class="item_card__price">
-                    от 24 000 ₽ <span class="item_card__price_old">44 000 ₽</span>
-                </div>
-            </a>
+            </div>
         </div>
     </div>
     <div class="catalog__bottom">
-        <div class="catalog__show_counts">Показано товаров: <span class="catalog__show_counts_value">24</span> из <span
-                class="catalog__show_counts_all_value">104</span></div>
-        <a href="#" class="catalog__next_btn btn this--wh">дальше</a>
+        <a href="#" class="catalog__next_btn btn this--wh">Показать ещё</a>
         <ul class="catalog__pagination">
+            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_prev"></a></li>
             <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link active ">1</a></li>
             <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">2</a></li>
             <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">3</a></li>
             <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">4</a></li>
-            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">5</a></li>
             <li class="catalog__pagination_item"><span>...</span></li>
             <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_link">9</a></li>
+            <li class="catalog__pagination_item"><a href="#" class="catalog__pagination_next"></a></li>
         </ul>
     </div>
 </div>
     </div>
-</div>
+    <div class="catalog_part__add_popup add_popup">
+    <div class="add_popup__title">Товар добавлен в корзину</div>
+    <div class="add_popup__item">
+        <div class="add_popup__item_img_wr">
+            <div class="add_popup__item_img">
+                <img src="/img/catalog_part/1.png" alt="">
+            </div>
         </div>
+        <div class="add_popup__item_info">
+            <div class="add_popup__item_title">Секции якоря для ДЭ-812 дополнительная строка</div>
+            <div class="item_card__price this--popup">
+                5000 ₽ <span class="item_card__price_old">6500 ₽</span>
+            </div>
+        </div>
+    </div>
+    <div class="add_popup__line"></div>
+    <div class="add_popup__total">Итого: 14 542 ₽</div>
+    <div class="add_popup__btns">
+        <a href="#" class="add_popup__btn btn">Оформить заказ</a>
+        <a href="#" class="add_popup__btn btn this--wh">Перейти к корзине</a>
+    </div>
+</div>
+    <div class="catalog_part__error_popup error_popup">
+    Произошла ошибка. Обновите страницу и попробуйте снова
+</div>
+</div>
+
+        </div>
+        <div class="catalog_part__reviews catalog_reviews section">
+    <div class="container">
+        <h2 class="catalog_reviews__title">Отзывы о категории</h2>
+        <div class="catalog_reviews__slider_wr">
+            <div class="catalog_reviews__slider_btn_prev"></div>
+            <div class="catalog_reviews__slider_btn_next"></div>
+            <div class="catalog_reviews__slider_pagination"></div>
+            <div class="catalog_reviews__slider catalog_slider swiper-container">
+                <div class="catalog_slider__wrapper swiper-wrapper">
+                    <div class="catalog_slider__slide swiper-slide">
+                        <div class="catalog_slider__review catalog_review">
+                            <div class="catalog_review__top">
+                                <div class="catalog_review__img">
+                                    <img src="/img/catalog_part/reviews/author.png" alt="">
+                                </div>
+                                <div class="catalog_review__author">
+                                    <div class="catalog_review__name">Фамилия Имя</div>
+                                    <div class="catalog_review__date">05.06.2021</div>
+                                </div>
+                            </div>
+                            <div class="catalog_review__body">
+                                И нет сомнений, что базовые сценарии поведения пользователей, вне зависимости от их
+                                уровня, должны быть представлены в исключительно положительном свете. Являясь всего лишь
+                                частью общей картины, предприниматели в сети интернет формируют глобальную экономическую
+                                сеть и при этом - разоблачены. В рамках спецификации современных стандартов, явные
+                                признаки победы институционализации смешаны с не уникальными данными до степени
+                                совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog_slider__slide swiper-slide">
+                        <div class="catalog_slider__review catalog_review">
+                            <div class="catalog_review__top">
+                                <div class="catalog_review__img">
+                                    <img src="/img/catalog_part/reviews/author.png" alt="">
+                                </div>
+                                <div class="catalog_review__author">
+                                    <div class="catalog_review__name">Константинов Константин Константинович, директор
+                                        “Сталь”
+                                    </div>
+                                    <div class="catalog_review__date">05.06.2021</div>
+                                </div>
+                            </div>
+                            <div class="catalog_review__body">
+                                И нет сомнений, что базовые сценарии поведения пользователей, вне зависимости от их
+                                уровня, должны быть представлены в исключительно положительном свете. Являясь всего лишь
+                                частью общей картины, предприниматели в сети интернет формируют глобальную экономическую
+                                сеть и при этом - разоблачены. В рамках спецификации современных стандартов, явные
+                                признаки победы институционализации смешаны с не уникальными данными до степени
+                                совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog_slider__slide swiper-slide">
+                        <div class="catalog_slider__review catalog_review">
+                            <div class="catalog_review__top">
+                                <div class="catalog_review__img">
+                                    <img src="/img/catalog_part/reviews/author.png" alt="">
+                                </div>
+                                <div class="catalog_review__author">
+                                    <div class="catalog_review__name">Фамилия Имя</div>
+                                    <div class="catalog_review__date">05.06.2021</div>
+                                </div>
+                            </div>
+                            <div class="catalog_review__body">
+                                И нет сомнений, что базовые сценарии поведения пользователей, вне зависимости от их
+                                уровня, должны быть представлены в исключительно положительном свете. Являясь всего лишь
+                                частью общей картины, предприниматели в сети интернет формируют глобальную экономическую
+                                сеть и при этом - разоблачены. В рамках спецификации современных стандартов, явные
+                                признаки победы институционализации смешаны с не уникальными данными до степени
+                                совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog_slider__slide swiper-slide">
+                        <div class="catalog_slider__review catalog_review">
+                            <div class="catalog_review__top">
+                                <div class="catalog_review__img">
+                                    <img src="/img/catalog_part/reviews/author.png" alt="">
+                                </div>
+                                <div class="catalog_review__author">
+                                    <div class="catalog_review__name">Константинов Константин Константинович, директор
+                                        “Сталь”
+                                    </div>
+                                    <div class="catalog_review__date">05.06.2021</div>
+                                </div>
+                            </div>
+                            <div class="catalog_review__body">
+                                И нет сомнений, что базовые сценарии поведения пользователей, вне зависимости от их
+                                уровня, должны быть представлены в исключительно положительном свете. Являясь всего лишь
+                                частью общей картины, предприниматели в сети интернет формируют глобальную экономическую
+                                сеть и при этом - разоблачены. В рамках спецификации современных стандартов, явные
+                                признаки победы институционализации смешаны с не уникальными данными до степени
+                                совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog_slider__slide swiper-slide">
+                        <div class="catalog_slider__review catalog_review">
+                            <div class="catalog_review__top">
+                                <div class="catalog_review__img">
+                                    <img src="/img/catalog_part/reviews/author.png" alt="">
+                                </div>
+                                <div class="catalog_review__author">
+                                    <div class="catalog_review__name">Фамилия Имя</div>
+                                    <div class="catalog_review__date">05.06.2021</div>
+                                </div>
+                            </div>
+                            <div class="catalog_review__body">
+                                И нет сомнений, что базовые сценарии поведения пользователей, вне зависимости от их
+                                уровня, должны быть представлены в исключительно положительном свете. Являясь всего лишь
+                                частью общей картины, предприниматели в сети интернет формируют глобальную экономическую
+                                сеть и при этом - разоблачены. В рамках спецификации современных стандартов, явные
+                                признаки победы институционализации смешаны с не уникальными данными до степени
+                                совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog_slider__slide swiper-slide">
+                        <div class="catalog_slider__review catalog_review">
+                            <div class="catalog_review__top">
+                                <div class="catalog_review__img">
+                                    <img src="/img/catalog_part/reviews/author.png" alt="">
+                                </div>
+                                <div class="catalog_review__author">
+                                    <div class="catalog_review__name">Константинов Константин Константинович, директор
+                                        “Сталь”
+                                    </div>
+                                    <div class="catalog_review__date">05.06.2021</div>
+                                </div>
+                            </div>
+                            <div class="catalog_review__body">
+                                И нет сомнений, что базовые сценарии поведения пользователей, вне зависимости от их
+                                уровня, должны быть представлены в исключительно положительном свете. Являясь всего лишь
+                                частью общей картины, предприниматели в сети интернет формируют глобальную экономическую
+                                сеть и при этом - разоблачены. В рамках спецификации современных стандартов, явные
+                                признаки победы институционализации смешаны с не уникальными данными до степени
+                                совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
     </main>
     <footer class="footer">
     <div class="container">
@@ -812,6 +1414,8 @@
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/jquery.sumoselect.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/catalog_part.js"></script>
 </body>
 

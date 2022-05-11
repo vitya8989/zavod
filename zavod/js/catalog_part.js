@@ -54,10 +54,10 @@ $('.filter__item_title_wr').click(function() {
 });
 
 // высплывабщая кнопка фильтра и нижние кнопки
-
-let catalogMobileFilterBtnCount = document.querySelector('.catalog__mobile_filter_btn_count');
 let filter = document.querySelector('.filter');
 let filterBody = document.querySelector('.filter__body');
+let radioButtons = filterBody.querySelectorAll('.filter__radio');
+let filterRadioLabel = filterBody.querySelectorAll('.filter__radio_label');
 let checkboxes = filterBody.querySelectorAll('input[type="checkbox"]');
 let filterFloatButton = filterBody.querySelector('.filter__float_button');
 let filterBtnsWr = document.querySelector('.filter__btns_wr');
@@ -83,17 +83,27 @@ for (let i = 0; i < checkboxes.length; i++) {
        }
        if (activeCheckboxes >= 1 && !filterBtnsWr.classList.contains('show'))  {
            filterBtnsWr.classList.add('show');
-           filterBody.classList.add('this--big_pb');
-           catalogMobileFilterBtnCount.textContent = activeCheckboxes + 1;
+
        } else if (activeCheckboxes === 0) {
            filterBtnsWr.classList.remove('show');
-           filterBody.classList.remove('this--big_pb');
-           catalogMobileFilterBtnCount.classList.remove('show');
            filterFloatButton.classList.add('this--hidden');
        }
-        if (activeCheckboxes >= 1) {
-            catalogMobileFilterBtnCount.classList.add('show');
-            catalogMobileFilterBtnCount.textContent = activeCheckboxes;
+    });
+}
+
+for (let i = 0; i < radioButtons.length; i++) {
+    radioButtons[i].addEventListener('change', () => {
+        if (radioButtons[i].checked) {
+            let topOfFloatButton = filterRadioLabel[i].offsetTop - 13;
+            filterFloatButton.style.top = `${topOfFloatButton}px`;
+            filterFloatButton.classList.remove('this--hidden');
+            if(typeof(timer) != 'undefined') {
+                clearTimeout(timer);
+            }
+
+            timer = setTimeout(() => {
+                filterFloatButton.classList.add('this--hidden');
+            }, 10000);
         }
     });
 }
@@ -115,12 +125,9 @@ for (let i = 0; i < filterPriceInput.length; i++) {
         }, 10000);
         if (!filterPriceInputFlag) {
             activeCheckboxes++;
-            catalogMobileFilterBtnCount.textContent = activeCheckboxes;
-            catalogMobileFilterBtnCount.classList.add('show');
             filterPriceInputFlag = true;
         }
         filterBtnsWr.classList.add('show');
-        filterBody.classList.add('this--big_pb');
     };
 }
 
@@ -148,8 +155,6 @@ $('#price_slider').slider({
         }, 10000);
         if (!filterPriceInputFlag) {
             activeCheckboxes++;
-            catalogMobileFilterBtnCount.textContent = activeCheckboxes;
-            catalogMobileFilterBtnCount.classList.add('show');
             filterPriceInputFlag = true;
         }
         filterBtnsWr.classList.add('show');
@@ -192,10 +197,7 @@ clearBtn.onclick = (e) => {
     filterBody.reset();
     filterFloatButton.classList.add('this--hidden');
     filterBtnsWr.classList.remove('show');
-    filterBody.classList.remove('this--big_pb');
     activeCheckboxes = 0;
-    catalogMobileFilterBtnCount.textContent = activeCheckboxes;
-    catalogMobileFilterBtnCount.classList.remove('show');
 }
 // открытие/закрытие мобильного фильтра
 
@@ -209,7 +211,23 @@ catalogMobileFilterBtn.onclick = () => {
 
 filterCloseBtn.onclick = () => {
     filter.classList.remove('filter_open');
-};
+}
+
+// тултип
+
+let filterItemTooltip = document.querySelector('.filter__item_tooltip');
+let filterItemTooltipBody = filterItemTooltip.querySelector('.filter__item_tooltip_body');
+
+let showTooltip = function (e) {
+    if (e.matches) {
+        filterItemTooltip.onclick = (e) => {
+            e.stopPropagation();
+            filterItemTooltipBody.classList.toggle('show');
+        }
+    }
+}
+mediaQuery959.addListener(showTooltip);
+showTooltip(mediaQuery959);;
 // показать/скрыть сортировку
 
 let catalogSortBtn = document.querySelector('.catalog__sort_btn ');
@@ -241,13 +259,84 @@ for (let sort of sortRadioInputs) {
     }
 }
 
-// кнопки категорий
+$('.select').SumoSelect();
 
-let catalogCategory = document.querySelectorAll('.catalog__category');
+let itemCards = document.querySelectorAll('.item_card');
+let addPopup = document.querySelector('.add_popup');
+let timerPopup;
+let errorPopup = document.querySelector('.error_popup');
+let timerError;
 
-for (let  i = 0; i < catalogCategory.length; i++) {
-    catalogCategory[i].onclick = () => {
-        catalogCategory[i].classList.toggle('active');
+for (let i = 0; i < itemCards.length; i++) {
+    let itemCardBtnfirst = itemCards[0].querySelector('.item_card__btn');
+    let itemCardBtn = itemCards[i].querySelector('.item_card__btn');
+    let itemCardOrdering = itemCards[i].querySelector('.item_card__ordering')
+    let itemCardOrderingMinus = itemCards[i].querySelector('.item_card__ordering_minus');
+    let itemCardOrderingValue = itemCards[i].querySelector('.item_card__ordering_value');
+    let itemCardOrderingPlus = itemCards[i].querySelector('.item_card__ordering_plus');
+
+    let inOrderCount = '';
+
+    itemCardBtn.onclick = () => {
+        itemCardBtn.classList.add('hidden');
+        itemCardOrdering.classList.add('show');
+        inOrderCount++;
+        itemCardOrderingValue.innerHTML = inOrderCount;
+        addPopup.classList.add('show');
+        if(typeof(timerPopup) != 'undefined') {
+            clearTimeout(timerPopup);
+        }
+
+        timerPopup = setTimeout(() => {
+            addPopup.classList.remove('show');
+        }, 3000);
+    }
+    itemCardBtnfirst.onclick = () => {
+        errorPopup.classList.add('show');
+        if(typeof(timerError) != 'undefined') {
+            clearTimeout(timerError);
+        }
+
+        timerError = setTimeout(() => {
+            errorPopup.classList.remove('show');
+        }, 3000);
+    }
+    itemCardOrderingMinus.onclick = () => {
+        inOrderCount--;
+        itemCardOrderingValue.innerHTML = inOrderCount;
+        if (inOrderCount < 1) {
+            itemCardBtn.classList.remove('hidden');
+            itemCardOrdering.classList.remove('show');
+        }
+    }
+    itemCardOrderingPlus.onclick = () => {
+        inOrderCount++;
+        itemCardOrderingValue.innerHTML = inOrderCount;
     }
 }
+
+
+
+;
+new Swiper('.catalog_slider', {
+    speed: 700,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.catalog_reviews__slider_btn_next',
+        prevEl: '.catalog_reviews__slider_btn_prev'
+    },
+    pagination: {
+        el: '.catalog_reviews__slider_pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        967: {
+            spaceBetween: 40,
+            slidesPerView: 2,
+            slidesPerGroup: 2
+        }
+    }
+});
 ;

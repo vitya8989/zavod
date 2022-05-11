@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Раздел каталога</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/sumoselect.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -16,6 +18,7 @@
         <div class="container">
             @@include('components/catalog_part/catalog_part_content/catalog_part_content.html')
         </div>
+        @@include('components/catalog_part/catalog_reviews/catalog_reviews.html')
     </main>
     @@include('components/footer/footer.html')
 </div>
@@ -23,6 +26,8 @@
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/jquery.sumoselect.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/catalog_part.js"></script>
 </body>
 

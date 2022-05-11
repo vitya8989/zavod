@@ -66,6 +66,8 @@ main {
 @import "./blocks/btn";
 @import "./blocks/title";
 @import "./blocks/text_and_img";
+@import "./blocks/form";
+@import "./blocks/item__cards";
 
 @import "../components/header/header";
 @import "../components/footer/footer";
@@ -79,8 +81,13 @@ main {
 @import "../components/catalog_part/catalog_part_body/catalog_part_body";
 @import "../components/catalog_part/catalog_part_content/catalog_part_content";
 @import "../components/catalog_part/catalog_part_filter/catalog_part_filter";
+@import "../components/catalog_part/add_popup/add_popup";
+@import "../components/catalog_part/error_popup/error_popup";
+@import "../components/catalog_part/catalog_reviews/catalog_reviews";
 
 @import "../components/contacts/contacts_map/contacts_map";
 @import "../components/contacts/contacts_form/contacts_form";
 
 @import "../components/page_404/page_404_top/page_404_top";
+
+@import "../components/detail/detail";

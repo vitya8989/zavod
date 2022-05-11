@@ -15,10 +15,10 @@ $('.filter__item_title_wr').click(function() {
 });
 
 // высплывабщая кнопка фильтра и нижние кнопки
-
-let catalogMobileFilterBtnCount = document.querySelector('.catalog__mobile_filter_btn_count');
 let filter = document.querySelector('.filter');
 let filterBody = document.querySelector('.filter__body');
+let radioButtons = filterBody.querySelectorAll('.filter__radio');
+let filterRadioLabel = filterBody.querySelectorAll('.filter__radio_label');
 let checkboxes = filterBody.querySelectorAll('input[type="checkbox"]');
 let filterFloatButton = filterBody.querySelector('.filter__float_button');
 let filterBtnsWr = document.querySelector('.filter__btns_wr');
@@ -44,17 +44,27 @@ for (let i = 0; i < checkboxes.length; i++) {
        }
        if (activeCheckboxes >= 1 && !filterBtnsWr.classList.contains('show'))  {
            filterBtnsWr.classList.add('show');
-           filterBody.classList.add('this--big_pb');
-           catalogMobileFilterBtnCount.textContent = activeCheckboxes + 1;
+
        } else if (activeCheckboxes === 0) {
            filterBtnsWr.classList.remove('show');
-           filterBody.classList.remove('this--big_pb');
-           catalogMobileFilterBtnCount.classList.remove('show');
            filterFloatButton.classList.add('this--hidden');
        }
-        if (activeCheckboxes >= 1) {
-            catalogMobileFilterBtnCount.classList.add('show');
-            catalogMobileFilterBtnCount.textContent = activeCheckboxes;
+    });
+}
+
+for (let i = 0; i < radioButtons.length; i++) {
+    radioButtons[i].addEventListener('change', () => {
+        if (radioButtons[i].checked) {
+            let topOfFloatButton = filterRadioLabel[i].offsetTop - 13;
+            filterFloatButton.style.top = `${topOfFloatButton}px`;
+            filterFloatButton.classList.remove('this--hidden');
+            if(typeof(timer) != 'undefined') {
+                clearTimeout(timer);
+            }
+
+            timer = setTimeout(() => {
+                filterFloatButton.classList.add('this--hidden');
+            }, 10000);
         }
     });
 }
@@ -76,12 +86,9 @@ for (let i = 0; i < filterPriceInput.length; i++) {
         }, 10000);
         if (!filterPriceInputFlag) {
             activeCheckboxes++;
-            catalogMobileFilterBtnCount.textContent = activeCheckboxes;
-            catalogMobileFilterBtnCount.classList.add('show');
             filterPriceInputFlag = true;
         }
         filterBtnsWr.classList.add('show');
-        filterBody.classList.add('this--big_pb');
     };
 }
 
@@ -109,8 +116,6 @@ $('#price_slider').slider({
         }, 10000);
         if (!filterPriceInputFlag) {
             activeCheckboxes++;
-            catalogMobileFilterBtnCount.textContent = activeCheckboxes;
-            catalogMobileFilterBtnCount.classList.add('show');
             filterPriceInputFlag = true;
         }
         filterBtnsWr.classList.add('show');
@@ -153,10 +158,7 @@ clearBtn.onclick = (e) => {
     filterBody.reset();
     filterFloatButton.classList.add('this--hidden');
     filterBtnsWr.classList.remove('show');
-    filterBody.classList.remove('this--big_pb');
     activeCheckboxes = 0;
-    catalogMobileFilterBtnCount.textContent = activeCheckboxes;
-    catalogMobileFilterBtnCount.classList.remove('show');
 }
 // открытие/закрытие мобильного фильтра
 
@@ -171,3 +173,19 @@ catalogMobileFilterBtn.onclick = () => {
 filterCloseBtn.onclick = () => {
     filter.classList.remove('filter_open');
 }
+
+// тултип
+
+let filterItemTooltip = document.querySelector('.filter__item_tooltip');
+let filterItemTooltipBody = filterItemTooltip.querySelector('.filter__item_tooltip_body');
+
+let showTooltip = function (e) {
+    if (e.matches) {
+        filterItemTooltip.onclick = (e) => {
+            e.stopPropagation();
+            filterItemTooltipBody.classList.toggle('show');
+        }
+    }
+}
+mediaQuery959.addListener(showTooltip);
+showTooltip(mediaQuery959);
