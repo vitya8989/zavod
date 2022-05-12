@@ -1,7 +1,8 @@
-new Swiper('.main_slider', {
+let mainSlider = new Swiper('.main_slider', {
     speed: 700,
     slidesPerView: 1,
     loop: true,
+    autoHeight: true,
     navigation: {
         nextEl: '.main_slider__btn_next',
         prevEl: '.main_slider__btn_prev'
@@ -14,4 +15,8 @@ new Swiper('.main_slider', {
     //     delay: 6850,
     //     disableOnInteraction: false,
     // },
+});
+
+window.addEventListener('load',() => {
+    mainSlider.update();
 });

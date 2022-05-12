@@ -59,7 +59,7 @@ function init() {
     });
     var myPlacemark = new ymaps.Placemark([59.925543, 30.411278], {}, {
         iconLayout: 'default#image',
-        iconImageHref: '/img/contacts/map_point.png',
+        iconImageHref: './img/contacts/map_point.png',
         iconImageSize: [35, 50],
         iconImageOffset: [0, -60]
     });

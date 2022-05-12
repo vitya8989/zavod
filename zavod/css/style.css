@@ -366,7 +366,7 @@ h2 {
   transition: 0.2s;
   width: 13px;
   height: 8px;
-  background: url("/img/icons/arrow_down.svg") 0 0/100% 100% no-repeat;
+  background: url("../img/icons/arrow_down.svg") 0 0/100% 100% no-repeat;
 }
 
 .input_wr .SumoSelect .optWrapper {
@@ -567,6 +567,10 @@ h2 {
   font-size: 1.8rem;
   line-height: 1.44;
   background: #F2F4FF;
+}
+
+.item_card__column.this--detail .item_card__value {
+  max-width: 175px;
 }
 
 .item_card__group {
@@ -1670,6 +1674,11 @@ h2 {
 
 .main_benefits__item_text {
   margin-top: 15px;
+}
+
+.main_benefits__item_text a {
+  display: block;
+  color: #272E3E;
 }
 
 .main_counts__items {
@@ -3072,6 +3081,10 @@ input[type="checkbox"]:checked + .filter__checkbox_label::before {
   color: #818BA1;
   margin-top: 15px;
   text-align: center;
+}
+
+.contacts_form__agreement a {
+  color: #818BA1;
 }
 
 .contacts_form__btn {

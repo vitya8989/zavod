@@ -83,6 +83,10 @@
 }
 .main_benefits__item_text {
   margin-top: 15px;
+  a {
+    display: block;
+    color: #272E3E;
+  }
   @media ($mobile) {
     margin-top: 5px;
   }

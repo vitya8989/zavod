@@ -19,7 +19,7 @@
                 <div class="header__time">ПН–ПТ 10:00 – 18:00</div>
                 <form action="" name="search" class="header__search_form">
                     <input type="text" class="header__search" placeholder="Поиск">
-                    <input type="submit" class="header__search_form_btn" value="" style="background: url('/img/header/lupe.png') 0 0/ 100% 100% no-repeat">
+                    <input type="submit" class="header__search_form_btn" value="" style="background: url('./img/header/lupe.png') 0 0/ 100% 100% no-repeat">
                 </form>
                 <a href="tel:+78124265225" class="header__tel">+7 (812) 426-52-25</a>
             </div>
@@ -31,7 +31,7 @@
                 <div class="header__logo_text_wr">
                     <a href="/" class="header__logo_text">
                         <div class="header__logo">
-                            <img src="/img/header/logo.png" alt="">
+                            <img src="./img/header/logo.png" alt="">
                         </div>
                         <div class="header__text">
                             завод по производству<br> запасных частей<br>для электрических машин
@@ -112,22 +112,24 @@
                 <div class="main_benefits__items this--contacts">
                     <div class="main_benefits__item">
                         <div class="main_benefits__item_img">
-                            <img src="/img/contacts/1.png" alt="">
+                            <img src="./img/contacts/1.png" alt="">
                         </div>
                         <div class="main_benefits__item_title">Адрес</div>
                         <div class="main_benefits__item_text">г. Санкт-Петербург, ул. Стахановцев, д.<br> 14, корп. 1 литер А, пом. 6-Н офис 2А</div>
                     </div>
                     <div class="main_benefits__item">
                         <div class="main_benefits__item_img">
-                            <img src="/img/contacts/2.png" alt="">
+                            <img src="./img/contacts/2.png" alt="">
                         </div>
                         <div class="main_benefits__item_title">Контакты</div>
-                        <div class="main_benefits__item_text">+7 (812) 426-52-25 <br>
-                            info@mysite.com</div>
+                        <div class="main_benefits__item_text">
+                            <a href="tel:+78124265225">+7 (812) 426-52-25</a>
+                            <a href="mailto:info@mysite.com">info@mysite.com</a>
+                        </div>
                     </div>
                     <div class="main_benefits__item">
                         <div class="main_benefits__item_img">
-                            <img src="/img/contacts/3.png" alt="">
+                            <img src="./img/contacts/3.png" alt="">
                         </div>
                         <div class="main_benefits__item_title">Режим работы</div>
                         <div class="main_benefits__item_text">ПН-ПТ с 10:00 до 18:00
@@ -157,7 +159,8 @@
                         <input type="text" class="contacts_form__input contacts_form__tel_email only_eng" name="name" placeholder="Телефон/E-mail">
                     </div>
                     <textarea name="comment" placeholder="Комментарий" class="contacts_form__textarea"></textarea>
-                    <div class="contacts_form__agreement">Нажимая на кнопку, вы соглашаетесь с условиями Политики конфиденциальности</div>
+                    <div class="contacts_form__agreement">Нажимая на кнопку, вы соглашаетесь с условиями <a
+                            href="#">Политики конфиденциальности</a></div>
                     <input type="submit" value="Заказать звонок" class="contacts_form__btn btn">
                 </form>
             </div>
@@ -171,7 +174,7 @@
             <div class="footer__top">
                 <a href="/" class="footer__logo_text">
                     <div class="footer__logo">
-                        <img src="/img/header/logo.png" alt="">
+                        <img src="./img/header/logo.png" alt="">
                     </div>
                     <div class="footer__text">
                         завод по производству<br> запасных частей<br>для электрических машин
@@ -219,12 +222,12 @@
                 </form>
                 <div class="footer__copyright_designed">
                     <div class="footer__copyright">© Все права защищены</div>
-                    <div class="footer__designed">
+                    <a href="https://profitkit.ru/" class="footer__designed">
                         <div class="footer__designed_text">Разработка сайта</div>
                         <div class="footer__designed_img">
-                            <img src="/img/footer/profitkit.png" alt="">
+                            <img src="./img/footer/profitkit.png" alt="">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
